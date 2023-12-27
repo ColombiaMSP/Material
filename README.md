@@ -4,13 +4,13 @@ El siguiente repositorio contendrá la información necesaia para las pruebas so
 
 El repositorio se estructura de la siguinete forma:
 
-## Docker:
+### Docker
   Contiene para desplegar sobre docker un servidor FHIR -- HAPI de pruebas
   
-## Proyectos Postman:
+### Proyectos Postman:
   Colecciones postman para poder descargar y probar.
   
-## Presentaciones - Material
+### Presentaciones - Material
 
-## Ejemplos  
+### Ejemplos  
   Contiene ejemplos completos de las transacciones.

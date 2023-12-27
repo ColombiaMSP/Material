@@ -1,3 +1,8 @@
+A continuación se incluyen colecciones postaman que permiten realizar diferentes pruebas sobre un servidor FHIR.
+Postaman es una herramienta gratuita, disponible en: https://www.postman.com/
+
+
+
 ## Colecciones postman para importar:
 
 1. **ServidorFHIR.postman_collection.json**

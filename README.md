@@ -1,4 +1,4 @@
-# REPOSITORIO MINISTERIO DE SALUD COLOMBIA
+# REPOSITORIO IHCE 
 
 El siguiente repositorio contendrá la información necesaia para las pruebas sobre la Historia Clinica Colombia.
 

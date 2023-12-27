@@ -13,7 +13,7 @@ El repositorio se estructura de la siguinete forma:
     ├── Ejemplos
     ├── Presentaciones
     └── Otros materiales
-
+```
 
 ### Docker
 Contiene para desplegar sobre docker un servidor FHIR -- HAPI de pruebas

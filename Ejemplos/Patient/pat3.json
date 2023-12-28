@@ -1,0 +1,65 @@
+
+{
+    "resourceType" : "Patient",
+    "meta" : {
+      "versionId" : "1",
+      "lastUpdated" : "2022-03-08T22:23:44.162Z",
+      "profile" : [
+        "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/PacienteCo"
+      ]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Luis Alberto Sanchez </b> male, DoB: 1974-12-25 ( Cédula ciudadanía: 98765)</p></div>"
+    },
+    "identifier" : [
+      {
+        "type" : {
+          "extension" : [
+            {
+              "url" : "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-pais",
+              "valueCodeableConcept" : {
+                "coding" : [
+                  {
+                    "system" : "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/PaisesCS",
+                    "code" : "170"
+                  }
+                ]
+              }
+            }
+          ],
+          "coding" : [
+            {
+              "system" : "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdspersonaColombia",
+              "code" : "CC",
+              "display" : "Cédula ciudadanía"
+            }
+          ]
+        },
+        "value" : "98765",
+        "assigner" : {
+          "display" : "Registraduria Nacional"
+        }
+      }
+    ],
+    "sex": "male",
+    "name" : [
+      {
+        "family" : "Sanchez",
+        "_family" : {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family",
+              "valueString" : "Martinez"
+            }
+          ]
+        },
+        "given" : [
+          "Luis",
+          "Alberto"
+        ]
+      }
+    ],
+    "gender" : "male",  
+    "birthDate" : "1974-12-25"
+  }

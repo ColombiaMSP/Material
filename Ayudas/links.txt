@@ -1,0 +1,8 @@
+A continuación, se describen links presentados en las capacitaciones:
+
+1- Ayuda para representar Bundle:
+    http://clinfhir.com/bundleVisualizer.html
+
+2- Visor IPS- Documento RDA: 
+    https://www.ipsviewer.com/
+

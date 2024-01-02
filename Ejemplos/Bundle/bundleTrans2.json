@@ -1,0 +1,262 @@
+{
+  "resourceType": "Bundle",
+  "meta": {
+      "profile": [
+          "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/BundleCo"
+      ]
+  },
+  "type": "transaction",
+  "entry": [
+      {
+          "fullUrl": "urn:uuid:487b6713-4647-4a9a-914e-7c552d7197e9",
+          "resource": {
+              "resourceType": "DocumentReference",
+              "meta": {
+                  "profile": [
+                      "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo"
+                  ]
+              },
+              "status": "current",
+              "type": {
+                  "coding": [
+                      {
+                          "system": "http://loinc.org",
+                          "code": "60591-5"
+                      }
+                  ]
+              },
+              "subject": {
+                  "reference": "urn:uuid:05d3374b-0278-4d04-93f7-6adc181d5874"
+              },
+              "date": "2022-07-11T11:57:38.3071625-05:00",
+              "author": [
+                  {
+                      "reference": "Organization/inst-252900003601",
+                      "display": "inst-testvalledelcauca"
+                  }
+              ],
+              "custodian": {
+                  "reference": "Organization/reg-76",
+                  "display": "reg-Valle del Cauca"
+              },
+              "content": [
+                  {
+                      "attachment": {
+                          "contentType": "application/fhir+json",
+                          "url": "urn:uuid:d384326c-7c0f-4ac2-ba90-a1d83e5b548f"
+                      }
+                  }
+              ]
+          },
+          "request": {
+              "method": "POST",
+              "url": "DocumentReference"
+          }
+      },
+      {
+          "fullUrl": "urn:uuid:d384326c-7c0f-4ac2-ba90-a1d83e5b548f",
+          "resource": {
+              "resourceType": "Composition",
+              "meta": {
+                  "versionId": "1",
+                  "lastUpdated": "2022-07-11T11:57:38.3111671-05:00",
+                  "profile": [
+                      "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo"
+                  ]
+              },
+              "status": "final",
+              "custodian": {
+                  "reference": "Organization/reg-76",
+                  "display": "reg-Valle del Cauca"
+              },
+              "type": {
+                  "coding": [
+                      {
+                          "system": "http://loinc.org",
+                          "code": "60591-5",
+                          "display": "Resumen Historia Clínica Enfermería"
+                      },
+                      {
+                          "system": "http://loinc.org",
+                          "code": "11450-4",
+                          "display": "Problem list - Reported"
+                      }
+                  ]
+              },
+              "subject": {
+                  "reference": "urn:uuid:05d3374b-0278-4d04-93f7-6adc181d5874"
+              },
+              "author": [
+                  {
+                      "reference": "urn:uuid:05d3374b-0278-4d04-93f7-6adc181d5899"
+                  }
+              ],
+              "date": "2022-07-11",
+              "title": "Resumen Historia Clínica",
+              "section": [
+                  {
+                      "title": "Condiciones de Paciente",
+                      "code": {
+                          "coding": [
+                              {
+                                  "system": "http://loinc.org",
+                                  "code": "11450-4",
+                                  "display": "Condition"
+                              }
+                          ]
+                      },
+                      "entry": [
+                          {
+                              "reference": "urn:uuid:c4916c5b-78cd-49c6-9290-fb1fc759850f"
+                          }
+                      ]
+                  }
+              ]
+          },
+          "request": {
+              "method": "POST",
+              "url": "Composition"
+          }
+      },
+      {
+          "fullUrl": "urn:uuid:c4916c5b-78cd-49c6-9290-fb1fc759850f",
+          "resource": {
+              "resourceType": "Condition",
+              "meta": {
+                  "versionId": "1",
+                  "lastUpdated": "2022-07-11T11:57:38.3131623-05:00",
+                  "profile": [
+                      "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/ConditionCo"
+                  ]
+              },
+              "code": {
+                  "coding": [
+                      {
+                          "system": "http://hl7.org/fhir/sid/icd-10",
+                          "code": "E14",
+                          "display": "DIABETES"
+                      }
+                  ],
+                  "text": "DIABETES"
+              },
+              "subject": {
+                  "reference": "urn:uuid:05d3374b-0278-4d04-93f7-6adc181d5874"
+              }
+          },
+          "request": {
+              "method": "POST",
+              "url": "Condition"
+          }
+      },
+      {
+          "fullUrl": "urn:uuid:05d3374b-0278-4d04-93f7-6adc181d5874",
+          "resource": {
+              "resourceType": "Patient",
+              "meta": {
+                  "versionId": "1",
+                  "lastUpdated": "2022-07-11T11:57:38.2901667-05:00",
+                  "profile": [
+                      "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/PacienteCo"
+                  ]
+              },
+              "identifier": [
+                  {
+                      "type": {
+                          "extension": [
+                              {
+                                  "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-pais",
+                                  "valueCodeableConcept": {
+                                      "coding": [
+                                          {
+                                              "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/PaisesCS",
+                                              "code": "170"
+                                          }
+                                      ]
+                                  }
+                              }
+                          ],
+                          "coding": [
+                              {
+                                  "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdspersonaColombia",
+                                  "code": "CC",
+                                  "display": "Cédula ciudadanía"
+                              }
+                          ]
+                      },
+                      "value": "1",
+                      "assigner": {
+                          "display": "Registraduria Nacional"
+                      }
+                  }
+              ],
+              "active": true,
+              "name": [
+                  {
+                      "family": "SANJ CUETEST",
+                      "given": [
+                          "JUAPRUEBA ANTPRUEB"
+                      ]
+                  }
+              ],
+              "gender": "male",
+              "birthDate": "1980-10-11"
+          },
+          "request": {
+              "method": "POST",
+              "url": "Patient"
+          }
+      },
+      {
+          "fullUrl": "urn:uuid:05d3374b-0278-4d04-93f7-6adc181d5899",
+          "resource": {
+              "resourceType": "Practitioner",
+              "meta": {
+                  "versionId": "1",
+                  "lastUpdated": "2023-12-18T17:05:05.732+00:00",
+                  "source": "#s1nAI59p6fqxV699",
+                  "profile": [
+                      "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/PractitionerCo"
+                  ]
+              },
+              "text": {
+                  "status": "generated",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> PROFESIONAL </div>"
+              },
+              "identifier": [
+                  {
+                      "type": {
+                          "extension": [
+                              {
+                                  "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-pais",
+                                  "valueCodeableConcept": {
+                                      "coding": [
+                                          {
+                                              "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/PaisesCS",
+                                              "code": "170"
+                                          }
+                                      ]
+                                  }
+                              }
+                          ],
+                          "coding": [
+                              {
+                                  "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdspersonaColombia",
+                                  "code": "CC",
+                                  "display": "Cédula ciudadanía"
+                              }
+                          ]
+                      },
+                      "value": "12345",
+                      "assigner": {
+                          "display": "Registraduria Nacional"
+                      }
+                  }
+              ]
+          },
+          "request": {
+              "method": "POST",
+              "url": "Practitioner"
+          }
+      }
+  ]
+}

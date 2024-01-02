@@ -13,3 +13,5 @@ Contiene ejemplos para verificar sobre el servidor HAPI Local desplegado
    Contiene ejemplos de las transacciones a probar sobre Vulcano.
    
 
+3. **vulcano.postman_environment.json**
+Contiene las variables de Servidores de Prueba, Vulcano. A incluir dentro de postman como entorno: "environment".

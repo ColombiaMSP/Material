@@ -8,3 +8,4 @@ A continuación, se describen links presentados en las capacitaciones:
 
 3- Generador de UUID on line:
     https://www.uuidgenerator.net/
+

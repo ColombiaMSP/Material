@@ -12,6 +12,7 @@ El repositorio se estructura de la siguinete forma:
     ├── Proyectos Postman
     ├── Ejemplos
     ├── Presentaciones
+    ├── Ejercicios
     └── Otros materiales
 ```
 
@@ -23,6 +24,9 @@ Colecciones postman para poder descargar y probar.
   
 ### Ejemplos  
 Contiene ejemplos completos de las transacciones.
+
+### Ejercicios
+Ejercicios a realizar
 
 ### Presentaciones - Material
 Pendiente

@@ -1,3 +1,3 @@
 # Ejemplos de Instancias.
 
-Ejemplos.
+Esta carpeta contiene ejemplos de instancias FHIR en formato JSON.

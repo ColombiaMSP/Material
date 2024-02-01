@@ -1,6 +1,6 @@
 # Repositorio HAPI - Docker.
 
-Docker compose ....
+El siguiente docker compose contiene:
  - Hapi FHIR (Spring implementation of FHIR)
  - Hapi FHIR Database (Psql database for the FHIR server)
 
@@ -19,6 +19,4 @@ To run the services use:
 ```bash
 $ docker-compose up -d
 ```
-
-### Configuration
 

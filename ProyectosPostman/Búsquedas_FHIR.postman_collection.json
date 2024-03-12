@@ -1,0 +1,1007 @@
+{
+	"info": {
+		"_postman_id": "0d68a3de-81b8-4425-b39c-76f981760833",
+		"name": "Búsquedas FHIR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13327082"
+	},
+	"item": [
+		{
+			"name": "busquedas",
+			"item": [
+				{
+					"name": "string",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{serv_fhir}}/Organization?name=Bogota",
+							"host": [
+								"{{serv_fhir}}"
+							],
+							"path": [
+								"Organization"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Bogota"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "bogota",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{serv_fhir}}/Organization?name=Bogota",
+									"host": [
+										"{{serv_fhir}}"
+									],
+									"path": [
+										"Organization"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Bogota"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 19:17:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.2.2 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "8n68ODrPwOl8Twft"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Tue, 05 Mar 2024 19:17:06 GMT"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Bundle\",\n    \"id\": \"61e2fd39-9c53-4fac-8710-407d2d15ea93\",\n    \"meta\": {\n        \"lastUpdated\": \"2024-03-05T19:17:06.593+00:00\"\n    },\n    \"type\": \"searchset\",\n    \"total\": 1,\n    \"link\": [\n        {\n            \"relation\": \"self\",\n            \"url\": \"http://vulcano.ihcecol.gov.co/fhir/Organization?name=Bogota\"\n        }\n    ],\n    \"entry\": [\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Organization/reg-11001\",\n            \"resource\": {\n                \"resourceType\": \"Organization\",\n                \"id\": \"reg-11001\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2023-12-28T17:43:22.169+00:00\",\n                    \"source\": \"#hLJ0hk9Jzluh7wye\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/OrganizacionCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">BOGOTA</div>\"\n                },\n                \"identifier\": [\n                    {\n                        \"system\": \"https://www.minsalud.gov.co/ihc/DIVIPOLA\",\n                        \"value\": \"11001\"\n                    }\n                ],\n                \"active\": true,\n                \"type\": [\n                    {\n                        \"coding\": [\n                            {\n                                \"system\": \"http://terminology.hl7.org/CodeSystem/organization-type\",\n                                \"code\": \"govt\",\n                                \"display\": \"Government\"\n                            }\n                        ],\n                        \"text\": \"Representa a Organización REGIÓN\"\n                    }\n                ],\n                \"name\": \"Bogota\"\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{serv_fhir}}/Composition/?date=gt2023-01-01",
+							"host": [
+								"{{serv_fhir}}"
+							],
+							"path": [
+								"Composition",
+								""
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "gt2023-01-01"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "gt",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{serv_fhir}}/Composition/?date=gt2023-01-01",
+									"host": [
+										"{{serv_fhir}}"
+									],
+									"path": [
+										"Composition",
+										""
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "gt2023-01-01"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 20:24:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.2.2 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "0dAfI8hr0DydrMXb"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Tue, 05 Mar 2024 20:24:36 GMT"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Bundle\",\n    \"id\": \"4f67c9bf-de2f-48e1-95c0-bf454fc4e33e\",\n    \"meta\": {\n        \"lastUpdated\": \"2024-03-05T20:24:36.419+00:00\"\n    },\n    \"type\": \"searchset\",\n    \"link\": [\n        {\n            \"relation\": \"self\",\n            \"url\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/?date=gt2023-01-01\"\n        },\n        {\n            \"relation\": \"next\",\n            \"url\": \"http://vulcano.ihcecol.gov.co/fhir?_getpages=4f67c9bf-de2f-48e1-95c0-bf454fc4e33e&_getpagesoffset=20&_count=20&_pretty=true&_bundletype=searchset\"\n        }\n    ],\n    \"entry\": [\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/b614188d-cda9-44d3-8472-44680c092c4a\",\n            \"resource\": {\n                \"resourceType\": \"Composition\",\n                \"id\": \"b614188d-cda9-44d3-8472-44680c092c4a\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2023-12-14T16:24:56.195+00:00\",\n                    \"source\": \"#gL3WS3CUQk95EswD\",\n                    \"profile\": [\n                        \"http://worldhealthorganization.github.io/ddcc/StructureDefinition/DDCCVSComposition\"\n                    ]\n                },\n                \"identifier\": {\n                    \"system\": \"http://acme.org/idcomposition\",\n                    \"value\": \"123617826318673\"\n                },\n                \"status\": \"final\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"82593-5\"\n                        }\n                    ]\n                },\n                \"category\": [\n                    {\n                        \"coding\": [\n                            {\n                                \"system\": \"http://worldhealthorganization.github.io/ddcc/CodeSystem/DDCC-Composition-Category-CodeSystem\",\n                                \"code\": \"ddcc-vs\"\n                            }\n                        ]\n                    }\n                ],\n                \"subject\": {\n                    \"reference\": \"Patient/2b64cb72-248c-4d3c-a7e7-109c54ed3041\"\n                },\n                \"date\": \"2023-12-14T16:25:39+00:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/0e37a29b-5e62-4fc3-a741-8d273c121396\"\n                    }\n                ],\n                \"title\": \"Digital Documentation of COVID-19 Certificate (DDCC)\",\n                \"attester\": [\n                    {\n                        \"mode\": \"official\",\n                        \"party\": {\n                            \"reference\": \"Organization/0e37a29b-5e62-4fc3-a741-8d273c121396\"\n                        }\n                    }\n                ],\n                \"section\": [\n                    {\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"11369-6\"\n                                }\n                            ]\n                        },\n                        \"focus\": {\n                            \"reference\": \"Immunization/2cb668d0-5c33-4e13-9084-6cdd24d70eb2\"\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"Immunization/2cb668d0-5c33-4e13-9084-6cdd24d70eb2\"\n                            },\n                            {\n                                \"reference\": \"DocumentReference/519d60b3-64dc-4822-8748-e540499bc8f7\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/55b19aee-2b97-40da-93a3-2dc170f5eda8\",\n            \"resource\": {\n                \"resourceType\": \"Composition\",\n                \"id\": \"55b19aee-2b97-40da-93a3-2dc170f5eda8\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2023-12-14T16:26:01.942+00:00\",\n                    \"source\": \"#wVGxydLKuRVEkdSU\",\n                    \"profile\": [\n                        \"http://worldhealthorganization.github.io/ddcc/StructureDefinition/DDCCVSComposition\"\n                    ]\n                },\n                \"identifier\": {\n                    \"system\": \"http://acme.org/idcomposition\",\n                    \"value\": \"123617826318673\"\n                },\n                \"status\": \"final\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"82593-5\"\n                        }\n                    ]\n                },\n                \"category\": [\n                    {\n                        \"coding\": [\n                            {\n                                \"system\": \"http://worldhealthorganization.github.io/ddcc/CodeSystem/DDCC-Composition-Category-CodeSystem\",\n                                \"code\": \"ddcc-vs\"\n                            }\n                        ]\n                    }\n                ],\n                \"subject\": {\n                    \"reference\": \"Patient/2b64cb72-248c-4d3c-a7e7-109c54ed3041\"\n                },\n                \"date\": \"2023-12-14T16:26:46+00:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/b6f311e1-5210-4e0e-9a93-30647794357a\"\n                    }\n                ],\n                \"title\": \"Digital Documentation of COVID-19 Certificate (DDCC)\",\n                \"attester\": [\n                    {\n                        \"mode\": \"official\",\n                        \"party\": {\n                            \"reference\": \"Organization/b6f311e1-5210-4e0e-9a93-30647794357a\"\n                        }\n                    }\n                ],\n                \"section\": [\n                    {\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"11369-6\"\n                                }\n                            ]\n                        },\n                        \"focus\": {\n                            \"reference\": \"Immunization/8be0fdc8-b57f-4451-8ffd-8bab1e2c98ad\"\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"Immunization/8be0fdc8-b57f-4451-8ffd-8bab1e2c98ad\"\n                            },\n                            {\n                                \"reference\": \"DocumentReference/68c46af4-522f-4797-95cf-950dfef457ca\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/1034\",\n            \"resource\": {\n                \"resourceType\": \"Composition\",\n                \"id\": \"1034\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-15T15:24:33.154+00:00\",\n                    \"source\": \"#isFWO6saw4NTvZFD\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">Composition</div>\"\n                },\n                \"status\": \"final\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\",\n                            \"display\": \"Documento resumen\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1032\"\n                },\n                \"date\": \"2024-01-15T15:21:49-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Practitioner/366\"\n                    }\n                ],\n                \"title\": \"RDA\",\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"section\": [\n                    {\n                        \"title\": \"Diagnósticos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"11450-4\",\n                                    \"display\": \"Condition\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"Condition/1035\"\n                            },\n                            {\n                                \"reference\": \"Condition/1035\"\n                            },\n                            {\n                                \"reference\": \"Condition/1035\"\n                            },\n                            {\n                                \"reference\": \"Condition/1035\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Alergias\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"48765-2\",\n                                    \"display\": \"AllergyIntolerance\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"AllergyIntolerance/1036\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1037\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1038\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1039\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1040\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Medicamentos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"10160-0\",\n                                    \"display\": \"Medication\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"MedicationStatement/1041\"\n                            },\n                            {\n                                \"reference\": \"MedicationStatement/1041\"\n                            },\n                            {\n                                \"reference\": \"MedicationStatement/1041\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/1044\",\n            \"resource\": {\n                \"resourceType\": \"Composition\",\n                \"id\": \"1044\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-15T15:24:39.888+00:00\",\n                    \"source\": \"#yrg5GBueXVn4KxOq\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">Composition</div>\"\n                },\n                \"status\": \"final\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\",\n                            \"display\": \"Documento resumen\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1042\"\n                },\n                \"date\": \"2024-01-15T15:21:49-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Practitioner/366\"\n                    }\n                ],\n                \"title\": \"RDA\",\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"section\": [\n                    {\n                        \"title\": \"Diagnósticos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"11450-4\",\n                                    \"display\": \"Condition\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"Condition/1045\"\n                            },\n                            {\n                                \"reference\": \"Condition/1045\"\n                            },\n                            {\n                                \"reference\": \"Condition/1045\"\n                            },\n                            {\n                                \"reference\": \"Condition/1045\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Alergias\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"48765-2\",\n                                    \"display\": \"AllergyIntolerance\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"AllergyIntolerance/1046\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1047\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1048\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1049\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1050\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Medicamentos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"10160-0\",\n                                    \"display\": \"Medication\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"MedicationStatement/1051\"\n                            },\n                            {\n                                \"reference\": \"MedicationStatement/1051\"\n                            },\n                            {\n                                \"reference\": \"MedicationStatement/1051\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/1068\",\n            \"resource\": {\n                \"resourceType\": \"Composition\",\n                \"id\": \"1068\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-15T19:39:25.580+00:00\",\n                    \"source\": \"#FzE6BXKBPM7chQnh\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">Composition</div>\"\n                },\n                \"status\": \"final\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\",\n                            \"display\": \"Documento resumen\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1065\"\n                },\n                \"date\": \"2024-01-15T19:39:18-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Practitioner/1066\"\n                    }\n                ],\n                \"title\": \"RDA\",\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"section\": [\n                    {\n                        \"title\": \"Diagnósticos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"11450-4\",\n                                    \"display\": \"Condition\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"Condition/1069\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Alergias\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"48765-2\",\n                                    \"display\": \"AllergyIntolerance\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"AllergyIntolerance/1070\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1071\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1072\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1073\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1074\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Medicamentos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"10160-0\",\n                                    \"display\": \"Medication\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"MedicationStatement/1075\"\n                            },\n                            {\n                                \"reference\": \"MedicationStatement/1076\"\n                            },\n                            {\n                                \"reference\": \"MedicationStatement/1077\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/1081\",\n            \"resource\": {\n                \"resourceType\": \"Composition\",\n                \"id\": \"1081\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-15T19:43:34.303+00:00\",\n                    \"source\": \"#9uubcJpktIZSfjmm\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">Composition</div>\"\n                },\n                \"status\": \"final\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\",\n                            \"display\": \"Documento resumen\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1078\"\n                },\n                \"date\": \"2024-01-15T19:39:18-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Practitioner/1079\"\n                    }\n                ],\n                \"title\": \"RDA\",\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"section\": [\n                    {\n                        \"title\": \"Diagnósticos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"11450-4\",\n                                    \"display\": \"Condition\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"Condition/1082\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Alergias\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"48765-2\",\n                                    \"display\": \"AllergyIntolerance\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"AllergyIntolerance/1083\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1084\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1085\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1086\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1087\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Medicamentos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"10160-0\",\n                                    \"display\": \"Medication\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"MedicationStatement/1088\"\n                            },\n                            {\n                                \"reference\": \"MedicationStatement/1089\"\n                            },\n                            {\n                                \"reference\": \"MedicationStatement/1090\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/1094\",\n            \"resource\": {\n                \"resourceType\": \"Composition\",\n                \"id\": \"1094\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-15T20:05:13.953+00:00\",\n                    \"source\": \"#ZSWIYUw9fKpod5PW\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">Composition</div>\"\n                },\n                \"status\": \"final\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\",\n                            \"display\": \"Documento resumen\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1091\"\n                },\n                \"date\": \"2024-01-15T20:05:08-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Practitioner/1092\"\n                    }\n                ],\n                \"title\": \"RDA\",\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"section\": [\n                    {\n                        \"title\": \"Diagnósticos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"11450-4\",\n                                    \"display\": \"Condition\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"Condition/1095\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Alergias\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"48765-2\",\n                                    \"display\": \"AllergyIntolerance\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"AllergyIntolerance/1096\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1097\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1098\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1099\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1100\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Medicamentos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"10160-0\",\n                                    \"display\": \"Medication\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"MedicationStatement/1101\"\n                            },\n                            {\n                                \"reference\": \"MedicationStatement/1102\"\n                            },\n                            {\n                                \"reference\": \"MedicationStatement/1103\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/1114\",\n            \"resource\": {\n                \"resourceType\": \"Composition\",\n                \"id\": \"1114\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-15T20:16:58.843+00:00\",\n                    \"source\": \"#zcPszltCIsm9iOMS\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: Composition</b></div>\"\n                },\n                \"status\": \"final\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\",\n                            \"display\": \"Patient Summary Document\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1118\"\n                },\n                \"date\": \"2023-10-06T09:13:16.304Z\",\n                \"author\": [\n                    {\n                        \"reference\": \"Practitioner/1113\"\n                    }\n                ],\n                \"title\": \"Resumen de Paciente Colombia\",\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-25\"\n                },\n                \"section\": [\n                    {\n                        \"title\": \"Diagnosticos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"11450-4\",\n                                    \"display\": \"Problem list - Reported\"\n                                }\n                            ]\n                        },\n                        \"text\": {\n                            \"status\": \"generated\",\n                            \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">DIAGNOSTICOS</div>\"\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"Condition/1117\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Alergias\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"48765-2\",\n                                    \"display\": \"Allergies and adverse reactions Document.\"\n                                }\n                            ]\n                        },\n                        \"text\": {\n                            \"status\": \"generated\",\n                            \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">ALERGIAS</div>\"\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"AllergyIntolerance/1115\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Medicaciones\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"10160-0\",\n                                    \"display\": \"History of Medication use Narrative\"\n                                }\n                            ]\n                        },\n                        \"text\": {\n                            \"status\": \"generated\",\n                            \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">MEDICACIONES</div>\"\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"MedicationStatement/1116\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/1140\",\n            \"resource\": {\n                \"resourceType\": \"Composition\",\n                \"id\": \"1140\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T19:22:03.421+00:00\",\n                    \"source\": \"#rKfhGWI3eslmKNK6\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">Composition</div>\"\n                },\n                \"status\": \"final\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\",\n                            \"display\": \"Patient Summary Document\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1137\"\n                },\n                \"date\": \"2024-01-16T19:21:51-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Practitioner/1138\"\n                    }\n                ],\n                \"title\": \"RDA\",\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"section\": [\n                    {\n                        \"title\": \"Diagnósticos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"11450-4\",\n                                    \"display\": \"Condition\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"Condition/1141\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Alergias\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"48765-2\",\n                                    \"display\": \"AllergyIntolerance\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"AllergyIntolerance/1142\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Medicamentos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"10160-0\",\n                                    \"display\": \"Medication\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"MedicationStatement/1143\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/1147\",\n            \"resource\": {\n                \"resourceType\": \"Composition\",\n                \"id\": \"1147\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T19:41:49.562+00:00\",\n                    \"source\": \"#Xbn3sBqtSOQbjU1m\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">Composition</div>\"\n                },\n                \"status\": \"final\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\",\n                            \"display\": \"Patient Summary Document\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1144\"\n                },\n                \"date\": \"2024-01-16T19:41:46-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Practitioner/1145\"\n                    }\n                ],\n                \"title\": \"RDA\",\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"section\": [\n                    {\n                        \"title\": \"Diagnósticos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"11450-4\",\n                                    \"display\": \"Condition\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"Condition/1148\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Alergias\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"48765-2\",\n                                    \"display\": \"AllergyIntolerance\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"AllergyIntolerance/1149\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Medicamentos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"10160-0\",\n                                    \"display\": \"Medication\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"MedicationStatement/1150\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/1154\",\n            \"resource\": {\n                \"resourceType\": \"Composition\",\n                \"id\": \"1154\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T19:48:07.821+00:00\",\n                    \"source\": \"#dM2mIWfG20bSx3yT\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">Composition</div>\"\n                },\n                \"status\": \"final\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\",\n                            \"display\": \"Patient Summary Document\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1151\"\n                },\n                \"date\": \"2024-01-16T19:47:57-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Practitioner/1152\"\n                    }\n                ],\n                \"title\": \"RDA\",\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"section\": [\n                    {\n                        \"title\": \"Diagnósticos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"11450-4\",\n                                    \"display\": \"Condition\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"Condition/1155\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Alergias\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"48765-2\",\n                                    \"display\": \"AllergyIntolerance\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"AllergyIntolerance/1156\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Medicamentos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"10160-0\",\n                                    \"display\": \"Medication\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"MedicationStatement/1157\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/1161\",\n            \"resource\": {\n                \"resourceType\": \"Composition\",\n                \"id\": \"1161\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T20:27:41.782+00:00\",\n                    \"source\": \"#qvbkwTzcXWB6xSUS\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">Composition</div>\"\n                },\n                \"status\": \"final\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\",\n                            \"display\": \"Patient Summary Document\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1158\"\n                },\n                \"date\": \"2024-01-16T20:27:36-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Practitioner/1159\"\n                    }\n                ],\n                \"title\": \"RDA\",\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"section\": [\n                    {\n                        \"title\": \"Diagnósticos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"11450-4\",\n                                    \"display\": \"Condition\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"Condition/1162\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Alergias\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"48765-2\",\n                                    \"display\": \"AllergyIntolerance\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"AllergyIntolerance/1163\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Medicamentos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"10160-0\",\n                                    \"display\": \"Medication\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"MedicationStatement/1164\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/1178\",\n            \"resource\": {\n                \"resourceType\": \"Composition\",\n                \"id\": \"1178\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T21:00:15.596+00:00\",\n                    \"source\": \"#ViirwfFhgiLaQxP0\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">Composition</div>\"\n                },\n                \"status\": \"final\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\",\n                            \"display\": \"Patient Summary Document\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1175\"\n                },\n                \"date\": \"2024-01-16T21:00:06-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Practitioner/1176\"\n                    }\n                ],\n                \"title\": \"RDA\",\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"section\": [\n                    {\n                        \"title\": \"Diagnósticos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"11450-4\",\n                                    \"display\": \"Condition\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"Condition/1179\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Alergias\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"48765-2\",\n                                    \"display\": \"AllergyIntolerance\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"AllergyIntolerance/1180\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Medicamentos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"10160-0\",\n                                    \"display\": \"Medication\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"MedicationStatement/1181\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/1185\",\n            \"resource\": {\n                \"resourceType\": \"Composition\",\n                \"id\": \"1185\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T21:11:17.777+00:00\",\n                    \"source\": \"#Gl6oD26gdKJN5sKe\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">Composition</div>\"\n                },\n                \"status\": \"final\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\",\n                            \"display\": \"Patient Summary Document\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1182\"\n                },\n                \"date\": \"2024-01-16T21:10:50-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Practitioner/1183\"\n                    }\n                ],\n                \"title\": \"RDA\",\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"section\": [\n                    {\n                        \"title\": \"Diagnósticos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"11450-4\",\n                                    \"display\": \"Condition\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"Condition/1186\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Alergias\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"48765-2\",\n                                    \"display\": \"AllergyIntolerance\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"AllergyIntolerance/1190\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1191\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1192\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1193\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1194\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Medicamentos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"10160-0\",\n                                    \"display\": \"Medication\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"MedicationStatement/1195\"\n                            },\n                            {\n                                \"reference\": \"MedicationStatement/1196\"\n                            },\n                            {\n                                \"reference\": \"MedicationStatement/1197\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Composition/1201\",\n            \"resource\": {\n                \"resourceType\": \"Composition\",\n                \"id\": \"1201\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T21:15:06.725+00:00\",\n                    \"source\": \"#jePWq9KgOymvhEov\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">Composition</div>\"\n                },\n                \"status\": \"final\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\",\n                            \"display\": \"Patient Summary Document\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1198\"\n                },\n                \"date\": \"2024-01-16T21:15:00-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Practitioner/1199\"\n                    }\n                ],\n                \"title\": \"RDA\",\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"section\": [\n                    {\n                        \"title\": \"Diagnósticos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"11450-4\",\n                                    \"display\": \"Condition\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"Condition/1202\"\n                            },\n                            {\n                                \"reference\": \"Condition/1203\"\n                            },\n                            {\n                                \"reference\": \"Condition/1204\"\n                            },\n                            {\n                                \"reference\": \"Condition/1205\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Alergias\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"48765-2\",\n                                    \"display\": \"AllergyIntolerance\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"AllergyIntolerance/1206\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1207\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1208\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1209\"\n                            },\n                            {\n                                \"reference\": \"AllergyIntolerance/1210\"\n                            }\n                        ]\n                    },\n                    {\n                        \"title\": \"Medicamentos\",\n                        \"code\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://loinc.org\",\n                                    \"code\": \"10160-0\",\n                                    \"display\": \"Medication\"\n                                }\n                            ]\n                        },\n                        \"entry\": [\n                            {\n                                \"reference\": \"MedicationStatement/1211\"\n                            },\n                            {\n                                \"reference\": \"MedicationStatement/1212\"\n                            },\n                            {\n                                \"reference\": \"MedicationStatement/1213\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "referencias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{serv_fhir}}/DocumentReference?custodian=Organization/reg-25&subject=Patient/1573",
+							"host": [
+								"{{serv_fhir}}"
+							],
+							"path": [
+								"DocumentReference"
+							],
+							"query": [
+								{
+									"key": "custodian",
+									"value": "Organization/reg-25"
+								},
+								{
+									"key": "subject",
+									"value": "Patient/1573"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "identifier",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{serv_fhir}}/Patient?identifier=BRWX789012",
+									"host": [
+										"{{serv_fhir}}"
+									],
+									"path": [
+										"Patient"
+									],
+									"query": [
+										{
+											"key": "identifier",
+											"value": "BRWX789012"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 14:09:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.2.2 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "ONQAbQypRPrmeN62"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Tue, 05 Mar 2024 14:09:59 GMT"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Bundle\",\n    \"id\": \"36aef78e-77e2-481a-be97-a4eed7cacd49\",\n    \"meta\": {\n        \"lastUpdated\": \"2024-03-05T14:09:59.247+00:00\"\n    },\n    \"type\": \"searchset\",\n    \"total\": 1,\n    \"link\": [\n        {\n            \"relation\": \"self\",\n            \"url\": \"http://vulcano.ihcecol.gov.co/fhir/Patient?identifier=BRWX789012\"\n        }\n    ],\n    \"entry\": [\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Patient/38\",\n            \"resource\": {\n                \"resourceType\": \"Patient\",\n                \"id\": \"38\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2023-12-05T16:17:05.300+00:00\",\n                    \"source\": \"#M96tGEHJZ49nXjZL\",\n                    \"security\": [\n                        {\n                            \"system\": \"http://terminology.hl7.org/CodeSystem/v3-ActReason\",\n                            \"code\": \"HTEST\"\n                        }\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><div class=\\\"hapiHeaderText\\\">Carlos <b>DRUMMOND </b></div><table class=\\\"hapiPropertyTable\\\"><tbody><tr><td>Identifier</td><td>BRWX789012</td></tr><tr><td>Date of birth</td><td><span>07 September 1959</span></td></tr></tbody></table></div>\"\n                },\n                \"identifier\": [\n                    {\n                        \"type\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                                    \"code\": \"PPN\"\n                                }\n                            ]\n                        },\n                        \"system\": \"urn:oid:2.16.840.1.113883.3.9143.2.1.5\",\n                        \"value\": \"BRWX789012\"\n                    },\n                    {\n                        \"use\": \"official\",\n                        \"type\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                                    \"code\": \"PPN\"\n                                }\n                            ]\n                        },\n                        \"system\": \"urn:oid:2.16.840.1.113883.3.9143.2.1.1\",\n                        \"value\": \"BRWX789012\"\n                    }\n                ],\n                \"active\": true,\n                \"name\": [\n                    {\n                        \"use\": \"official\",\n                        \"text\": \"Carlos Drummond\",\n                        \"family\": \"Drummond\",\n                        \"given\": [\n                            \"Carlos\"\n                        ]\n                    }\n                ],\n                \"gender\": \"male\",\n                \"birthDate\": \"1959-09-07\"\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        }\n    ]\n}"
+						},
+						{
+							"name": "sin filtros Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{serv_fhir}}/DocumentReference?subject.identifier=50",
+									"host": [
+										"{{serv_fhir}}"
+									],
+									"path": [
+										"DocumentReference"
+									],
+									"query": [
+										{
+											"key": "subject.identifier",
+											"value": "50"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 14:11:54 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.2.2 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "r8lkf4GYwKGu9LAZ"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Tue, 05 Mar 2024 14:11:54 GMT"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Bundle\",\n    \"id\": \"aef1016a-566e-4ac2-8adf-8cb9eaf62fb7\",\n    \"meta\": {\n        \"lastUpdated\": \"2024-03-05T14:11:54.845+00:00\"\n    },\n    \"type\": \"searchset\",\n    \"total\": 0,\n    \"link\": [\n        {\n            \"relation\": \"self\",\n            \"url\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference?subject.identifier=50\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "indentg",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{serv_fhir}}/DocumentReference?subject.identifier=77889900",
+									"host": [
+										"{{serv_fhir}}"
+									],
+									"path": [
+										"DocumentReference"
+									],
+									"query": [
+										{
+											"key": "subject.identifier",
+											"value": "77889900"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 14:18:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.2.2 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "Ut5r6OToXDyHuYKp"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Tue, 05 Mar 2024 14:18:21 GMT"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Bundle\",\n    \"id\": \"b0a624cd-f380-43f3-b945-8bd809c54343\",\n    \"meta\": {\n        \"lastUpdated\": \"2024-03-05T14:18:21.350+00:00\"\n    },\n    \"type\": \"searchset\",\n    \"total\": 6,\n    \"link\": [\n        {\n            \"relation\": \"self\",\n            \"url\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference?subject.identifier=77889900\"\n        }\n    ],\n    \"entry\": [\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1903\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1903\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-26T20:56:09.362+00:00\",\n                    \"source\": \"#Pwg3ZrITfXJQITAH\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1909\",\n                    \"display\": \"Juana Ines de la Cruz\"\n                },\n                \"date\": \"2023-11-28T17:31:31.745+00:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-2589902990\",\n                        \"display\": \"HOSPITAL UNIVERSITARIO DE LA SAMARITANA\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-25\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1905\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1964\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1964\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-27T16:49:44.662+00:00\",\n                    \"source\": \"#1s4gv0xGyRbpvbnY\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1970\",\n                    \"display\": \"Juana Ines de la Cruz\"\n                },\n                \"date\": \"2023-11-28T17:31:31.745+00:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-2589902990\",\n                        \"display\": \"HOSPITAL UNIVERSITARIO DE LA SAMARITANA\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-25\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1966\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/2001\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"2001\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-03-01T15:21:09.052+00:00\",\n                    \"source\": \"#F14fPqVHVx13biz4\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/2007\",\n                    \"display\": \"Juana Ines de la Cruz\"\n                },\n                \"date\": \"2023-11-28T17:31:31.745+00:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-2589902990\",\n                        \"display\": \"HOSPITAL UNIVERSITARIO DE LA SAMARITANA\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-25\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/2003\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/2008\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"2008\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-03-01T15:44:57.553+00:00\",\n                    \"source\": \"#YSqBi5rfdPbKEHpe\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/2014\",\n                    \"display\": \"Juana Ines Delacruz\"\n                },\n                \"date\": \"2024-03-03T10:31:31.745+00:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-760010395401\",\n                        \"display\": \"HOSPITAL DEPARTAMENTAL MARIO CORREA RENGIFO EMPRESA SOCIAL DEL ESTADO\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-76\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/2010\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/2022\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"2022\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-03-01T15:48:47.735+00:00\",\n                    \"source\": \"#7m353LXxmnSE7tYA\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/2028\",\n                    \"display\": \"Juana Ines Delacruz\"\n                },\n                \"date\": \"2024-03-03T10:31:31.745+00:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-760010395401\",\n                        \"display\": \"HOSPITAL DEPARTAMENTAL MARIO CORREA RENGIFO EMPRESA SOCIAL DEL ESTADO\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-76\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/2024\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/2029\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"2029\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-03-03T16:56:04.411+00:00\",\n                    \"source\": \"#aLFfBb4jtPMLiWdi\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/2035\",\n                    \"display\": \"Juana Ines Delacruz\"\n                },\n                \"date\": \"2024-03-03T10:31:31.745+00:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-760010395401\",\n                        \"display\": \"HOSPITAL DEPARTAMENTAL MARIO CORREA RENGIFO EMPRESA SOCIAL DEL ESTADO\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-76\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/2031\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        }\n    ]\n}"
+						},
+						{
+							"name": "sub y reg",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{serv_fhir}}/DocumentReference?custodian=Organization/reg-25&subject=Patient/1573",
+									"host": [
+										"{{serv_fhir}}"
+									],
+									"path": [
+										"DocumentReference"
+									],
+									"query": [
+										{
+											"key": "custodian",
+											"value": "Organization/reg-25"
+										},
+										{
+											"key": "subject",
+											"value": "Patient/1573"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 20:02:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.2.2 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "ur6a6sH52H26CzYn"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Tue, 05 Mar 2024 20:02:04 GMT"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Bundle\",\n    \"id\": \"4a3a94fd-b45d-450a-8e11-20f28369739c\",\n    \"meta\": {\n        \"lastUpdated\": \"2024-03-05T20:02:04.073+00:00\"\n    },\n    \"type\": \"searchset\",\n    \"total\": 1,\n    \"link\": [\n        {\n            \"relation\": \"self\",\n            \"url\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference?custodian=Organization%2Freg-25&subject=Patient%2F1573\"\n        }\n    ],\n    \"entry\": [\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1575\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1575\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-23T20:52:42.821+00:00\",\n                    \"source\": \"#86ef6PWjkpaOqncN\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1573\"\n                },\n                \"date\": \"2024-01-23T20:52:42-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-253860004301\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-25\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1576\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{serv_fhir}}/Condition?code=http://hl7.org/fhir/sid/icd-10|E10.4",
+							"host": [
+								"{{serv_fhir}}"
+							],
+							"path": [
+								"Condition"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "http://hl7.org/fhir/sid/icd-10|E10.4"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "indentg",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{serv_fhir}}/DocumentReference?subject.identifier=77889900",
+									"host": [
+										"{{serv_fhir}}"
+									],
+									"path": [
+										"DocumentReference"
+									],
+									"query": [
+										{
+											"key": "subject.identifier",
+											"value": "77889900"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 14:18:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.2.2 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "Ut5r6OToXDyHuYKp"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Tue, 05 Mar 2024 14:18:21 GMT"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Bundle\",\n    \"id\": \"b0a624cd-f380-43f3-b945-8bd809c54343\",\n    \"meta\": {\n        \"lastUpdated\": \"2024-03-05T14:18:21.350+00:00\"\n    },\n    \"type\": \"searchset\",\n    \"total\": 6,\n    \"link\": [\n        {\n            \"relation\": \"self\",\n            \"url\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference?subject.identifier=77889900\"\n        }\n    ],\n    \"entry\": [\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1903\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1903\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-26T20:56:09.362+00:00\",\n                    \"source\": \"#Pwg3ZrITfXJQITAH\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1909\",\n                    \"display\": \"Juana Ines de la Cruz\"\n                },\n                \"date\": \"2023-11-28T17:31:31.745+00:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-2589902990\",\n                        \"display\": \"HOSPITAL UNIVERSITARIO DE LA SAMARITANA\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-25\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1905\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1964\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1964\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-27T16:49:44.662+00:00\",\n                    \"source\": \"#1s4gv0xGyRbpvbnY\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1970\",\n                    \"display\": \"Juana Ines de la Cruz\"\n                },\n                \"date\": \"2023-11-28T17:31:31.745+00:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-2589902990\",\n                        \"display\": \"HOSPITAL UNIVERSITARIO DE LA SAMARITANA\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-25\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1966\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/2001\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"2001\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-03-01T15:21:09.052+00:00\",\n                    \"source\": \"#F14fPqVHVx13biz4\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/2007\",\n                    \"display\": \"Juana Ines de la Cruz\"\n                },\n                \"date\": \"2023-11-28T17:31:31.745+00:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-2589902990\",\n                        \"display\": \"HOSPITAL UNIVERSITARIO DE LA SAMARITANA\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-25\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/2003\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/2008\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"2008\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-03-01T15:44:57.553+00:00\",\n                    \"source\": \"#YSqBi5rfdPbKEHpe\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/2014\",\n                    \"display\": \"Juana Ines Delacruz\"\n                },\n                \"date\": \"2024-03-03T10:31:31.745+00:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-760010395401\",\n                        \"display\": \"HOSPITAL DEPARTAMENTAL MARIO CORREA RENGIFO EMPRESA SOCIAL DEL ESTADO\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-76\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/2010\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/2022\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"2022\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-03-01T15:48:47.735+00:00\",\n                    \"source\": \"#7m353LXxmnSE7tYA\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/2028\",\n                    \"display\": \"Juana Ines Delacruz\"\n                },\n                \"date\": \"2024-03-03T10:31:31.745+00:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-760010395401\",\n                        \"display\": \"HOSPITAL DEPARTAMENTAL MARIO CORREA RENGIFO EMPRESA SOCIAL DEL ESTADO\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-76\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/2024\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/2029\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"2029\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-03-03T16:56:04.411+00:00\",\n                    \"source\": \"#aLFfBb4jtPMLiWdi\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/2035\",\n                    \"display\": \"Juana Ines Delacruz\"\n                },\n                \"date\": \"2024-03-03T10:31:31.745+00:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-760010395401\",\n                        \"display\": \"HOSPITAL DEPARTAMENTAL MARIO CORREA RENGIFO EMPRESA SOCIAL DEL ESTADO\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-76\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/2031\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "extension parameter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{serv_fhir}}/Patient?identifier-country=170&identifier=10001&identifier-type=CC",
+							"host": [
+								"{{serv_fhir}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "identifier-country",
+									"value": "170"
+								},
+								{
+									"key": "identifier",
+									"value": "10001"
+								},
+								{
+									"key": "identifier-type",
+									"value": "CC"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "identifier",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{serv_fhir}}/Patient?identifier=BRWX789012",
+									"host": [
+										"{{serv_fhir}}"
+									],
+									"path": [
+										"Patient"
+									],
+									"query": [
+										{
+											"key": "identifier",
+											"value": "BRWX789012"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 14:09:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.2.2 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "ONQAbQypRPrmeN62"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Tue, 05 Mar 2024 14:09:59 GMT"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Bundle\",\n    \"id\": \"36aef78e-77e2-481a-be97-a4eed7cacd49\",\n    \"meta\": {\n        \"lastUpdated\": \"2024-03-05T14:09:59.247+00:00\"\n    },\n    \"type\": \"searchset\",\n    \"total\": 1,\n    \"link\": [\n        {\n            \"relation\": \"self\",\n            \"url\": \"http://vulcano.ihcecol.gov.co/fhir/Patient?identifier=BRWX789012\"\n        }\n    ],\n    \"entry\": [\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Patient/38\",\n            \"resource\": {\n                \"resourceType\": \"Patient\",\n                \"id\": \"38\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2023-12-05T16:17:05.300+00:00\",\n                    \"source\": \"#M96tGEHJZ49nXjZL\",\n                    \"security\": [\n                        {\n                            \"system\": \"http://terminology.hl7.org/CodeSystem/v3-ActReason\",\n                            \"code\": \"HTEST\"\n                        }\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><div class=\\\"hapiHeaderText\\\">Carlos <b>DRUMMOND </b></div><table class=\\\"hapiPropertyTable\\\"><tbody><tr><td>Identifier</td><td>BRWX789012</td></tr><tr><td>Date of birth</td><td><span>07 September 1959</span></td></tr></tbody></table></div>\"\n                },\n                \"identifier\": [\n                    {\n                        \"type\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                                    \"code\": \"PPN\"\n                                }\n                            ]\n                        },\n                        \"system\": \"urn:oid:2.16.840.1.113883.3.9143.2.1.5\",\n                        \"value\": \"BRWX789012\"\n                    },\n                    {\n                        \"use\": \"official\",\n                        \"type\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                                    \"code\": \"PPN\"\n                                }\n                            ]\n                        },\n                        \"system\": \"urn:oid:2.16.840.1.113883.3.9143.2.1.1\",\n                        \"value\": \"BRWX789012\"\n                    }\n                ],\n                \"active\": true,\n                \"name\": [\n                    {\n                        \"use\": \"official\",\n                        \"text\": \"Carlos Drummond\",\n                        \"family\": \"Drummond\",\n                        \"given\": [\n                            \"Carlos\"\n                        ]\n                    }\n                ],\n                \"gender\": \"male\",\n                \"birthDate\": \"1959-09-07\"\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        }\n    ]\n}"
+						},
+						{
+							"name": "extension parameter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{serv_fhir}}/Patient?identifier-country=170&identifier=10001&identifier-type=CC",
+									"host": [
+										"{{serv_fhir}}"
+									],
+									"path": [
+										"Patient"
+									],
+									"query": [
+										{
+											"key": "identifier-country",
+											"value": "170"
+										},
+										{
+											"key": "identifier",
+											"value": "10001"
+										},
+										{
+											"key": "identifier-type",
+											"value": "CC"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 20:19:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Cache",
+									"value": "HIT from http://vulcano.ihcecol.gov.co/fhir"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.2.2 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "v8MLqG3knkC987vn"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Tue, 05 Mar 2024 20:18:55 GMT"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Bundle\",\n    \"id\": \"b289a012-c60c-4af8-8846-b1c130e812b0\",\n    \"meta\": {\n        \"lastUpdated\": \"2024-03-05T20:18:55.938+00:00\"\n    },\n    \"type\": \"searchset\",\n    \"total\": 3,\n    \"link\": [\n        {\n            \"relation\": \"self\",\n            \"url\": \"http://vulcano.ihcecol.gov.co/fhir/Patient?identifier=10001&identifier-country=170&identifier-type=CC\"\n        }\n    ],\n    \"entry\": [\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Patient/329\",\n            \"resource\": {\n                \"resourceType\": \"Patient\",\n                \"id\": \"329\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2023-12-18T14:46:45.168+00:00\",\n                    \"source\": \"#7H84Gh4VVnsRYVpY\"\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><div class=\\\"hapiHeaderText\\\">Ana Maria <b>CORTEZ </b></div><table class=\\\"hapiPropertyTable\\\"><tbody><tr><td>Identifier</td><td>10001</td></tr><tr><td>Address</td><td><span>Medellín </span><span>152 </span></td></tr><tr><td>Date of birth</td><td><span>25 December 1992</span></td></tr></tbody></table></div>\"\n                },\n                \"extension\": [\n                    {\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/patient-genderIdentity\",\n                        \"valueCodeableConcept\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdentidadGeneroCS\",\n                                    \"code\": \"01\"\n                                }\n                            ]\n                        }\n                    },\n                    {\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/patient-disability\",\n                        \"valueCodeableConcept\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"https://www.minsalud.gov.co/ihc/fhir/CodeSystem/DiscapacidadCS\",\n                                    \"code\": \"01\",\n                                    \"display\": \"Discapacidad fisica\"\n                                }\n                            ]\n                        }\n                    },\n                    {\n                        \"url\": \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/Etnia\",\n                        \"valueCodeableConcept\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"https://www.minsalud.gov.co/ihc/fhir/CodeSystem/EtniaCS\",\n                                    \"code\": \"01\",\n                                    \"display\": \"Indigena\"\n                                }\n                            ]\n                        }\n                    },\n                    {\n                        \"url\": \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/Pais\",\n                        \"valueCodeableConcept\": {\n                            \"coding\": [\n                                {\n                                    \"code\": \"170\",\n                                    \"display\": \"Colombia\"\n                                }\n                            ]\n                        }\n                    }\n                ],\n                \"identifier\": [\n                    {\n                        \"type\": {\n                            \"extension\": [\n                                {\n                                    \"url\": \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/Pais\",\n                                    \"valueCodeableConcept\": {\n                                        \"coding\": [\n                                            {\n                                                \"code\": \"170\"\n                                            }\n                                        ]\n                                    }\n                                }\n                            ],\n                            \"coding\": [\n                                {\n                                    \"system\": \"https://www.minsalud.gov.co/ihc/fhir/CodeSystem/ids-personaColombia\",\n                                    \"code\": \"CC\",\n                                    \"display\": \"Cédula ciudadanía\"\n                                }\n                            ]\n                        },\n                        \"value\": \"10001\",\n                        \"assigner\": {\n                            \"display\": \"Registraduria Nacional\"\n                        }\n                    }\n                ],\n                \"name\": [\n                    {\n                        \"family\": \"Cortez\",\n                        \"_family\": {\n                            \"extension\": [\n                                {\n                                    \"url\": \"http://hl7.org/fhir/StructureDefinition/humanname-mothers-family\"\n                                }\n                            ]\n                        },\n                        \"given\": [\n                            \"Ana\",\n                            \"Maria\"\n                        ]\n                    }\n                ],\n                \"gender\": \"male\",\n                \"birthDate\": \"1992-12-25\",\n                \"_birthDate\": {\n                    \"extension\": [\n                        {\n                            \"url\": \"http://hl7.org/fhir/StructureDefinition/patient-birthTime\",\n                            \"valueDateTime\": \"1992-12-25T14:35:45-05:00\"\n                        }\n                    ]\n                },\n                \"address\": [\n                    {\n                        \"extension\": [\n                            {\n                                \"url\": \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/ZonaResidencia\",\n                                \"valueCodeableConcept\": {\n                                    \"coding\": [\n                                        {\n                                            \"code\": \"02\"\n                                        }\n                                    ]\n                                }\n                            }\n                        ],\n                        \"city\": \"Medellín\",\n                        \"country\": \"152\"\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Patient/583\",\n            \"resource\": {\n                \"resourceType\": \"Patient\",\n                \"id\": \"583\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2023-12-18T19:59:06.653+00:00\",\n                    \"source\": \"#5BGbs2QCMFHqmgf3\"\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><div class=\\\"hapiHeaderText\\\">Ana Maria <b>CORTEZ </b></div><table class=\\\"hapiPropertyTable\\\"><tbody><tr><td>Identifier</td><td>10001</td></tr><tr><td>Address</td><td><span>Medellín </span><span>152 </span></td></tr><tr><td>Date of birth</td><td><span>25 December 1992</span></td></tr></tbody></table></div>\"\n                },\n                \"extension\": [\n                    {\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/patient-genderIdentity\",\n                        \"valueCodeableConcept\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdentidadGeneroCS\",\n                                    \"code\": \"01\"\n                                }\n                            ]\n                        }\n                    },\n                    {\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/patient-disability\",\n                        \"valueCodeableConcept\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"https://www.minsalud.gov.co/ihc/fhir/CodeSystem/DiscapacidadCS\",\n                                    \"code\": \"01\",\n                                    \"display\": \"Discapacidad fisica\"\n                                }\n                            ]\n                        }\n                    },\n                    {\n                        \"url\": \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/Etnia\",\n                        \"valueCodeableConcept\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"https://www.minsalud.gov.co/ihc/fhir/CodeSystem/EtniaCS\",\n                                    \"code\": \"01\",\n                                    \"display\": \"Indigena\"\n                                }\n                            ]\n                        }\n                    },\n                    {\n                        \"url\": \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/Pais\",\n                        \"valueCodeableConcept\": {\n                            \"coding\": [\n                                {\n                                    \"code\": \"170\",\n                                    \"display\": \"Colombia\"\n                                }\n                            ]\n                        }\n                    }\n                ],\n                \"identifier\": [\n                    {\n                        \"type\": {\n                            \"extension\": [\n                                {\n                                    \"url\": \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/Pais\",\n                                    \"valueCodeableConcept\": {\n                                        \"coding\": [\n                                            {\n                                                \"code\": \"170\"\n                                            }\n                                        ]\n                                    }\n                                }\n                            ],\n                            \"coding\": [\n                                {\n                                    \"system\": \"https://www.minsalud.gov.co/ihc/fhir/CodeSystem/ids-personaColombia\",\n                                    \"code\": \"CC\",\n                                    \"display\": \"Cédula ciudadanía\"\n                                }\n                            ]\n                        },\n                        \"value\": \"10001\",\n                        \"assigner\": {\n                            \"display\": \"Registraduria Nacional\"\n                        }\n                    }\n                ],\n                \"name\": [\n                    {\n                        \"family\": \"Cortez\",\n                        \"_family\": {\n                            \"extension\": [\n                                {\n                                    \"url\": \"http://hl7.org/fhir/StructureDefinition/humanname-mothers-family\"\n                                }\n                            ]\n                        },\n                        \"given\": [\n                            \"Ana\",\n                            \"Maria\"\n                        ]\n                    }\n                ],\n                \"gender\": \"male\",\n                \"birthDate\": \"1992-12-25\",\n                \"_birthDate\": {\n                    \"extension\": [\n                        {\n                            \"url\": \"http://hl7.org/fhir/StructureDefinition/patient-birthTime\",\n                            \"valueDateTime\": \"1992-12-25T14:35:45-05:00\"\n                        }\n                    ]\n                },\n                \"address\": [\n                    {\n                        \"extension\": [\n                            {\n                                \"url\": \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/ZonaResidencia\",\n                                \"valueCodeableConcept\": {\n                                    \"coding\": [\n                                        {\n                                            \"code\": \"02\"\n                                        }\n                                    ]\n                                }\n                            }\n                        ],\n                        \"city\": \"Medellín\",\n                        \"country\": \"152\"\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Patient/594\",\n            \"resource\": {\n                \"resourceType\": \"Patient\",\n                \"id\": \"594\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2023-12-19T14:28:44.014+00:00\",\n                    \"source\": \"#Hi6CMDz7GCl3KXgP\"\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><div class=\\\"hapiHeaderText\\\">Ana Maria <b>CORTEZ </b></div><table class=\\\"hapiPropertyTable\\\"><tbody><tr><td>Identifier</td><td>10001</td></tr><tr><td>Address</td><td><span>Medellín </span><span>152 </span></td></tr><tr><td>Date of birth</td><td><span>25 December 1992</span></td></tr></tbody></table></div>\"\n                },\n                \"extension\": [\n                    {\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/patient-genderIdentity\",\n                        \"valueCodeableConcept\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdentidadGeneroCS\",\n                                    \"code\": \"01\"\n                                }\n                            ]\n                        }\n                    },\n                    {\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/patient-disability\",\n                        \"valueCodeableConcept\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"https://www.minsalud.gov.co/ihc/fhir/CodeSystem/DiscapacidadCS\",\n                                    \"code\": \"01\",\n                                    \"display\": \"Discapacidad fisica\"\n                                }\n                            ]\n                        }\n                    },\n                    {\n                        \"url\": \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/Etnia\",\n                        \"valueCodeableConcept\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"https://www.minsalud.gov.co/ihc/fhir/CodeSystem/EtniaCS\",\n                                    \"code\": \"01\",\n                                    \"display\": \"Indigena\"\n                                }\n                            ]\n                        }\n                    },\n                    {\n                        \"url\": \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/Pais\",\n                        \"valueCodeableConcept\": {\n                            \"coding\": [\n                                {\n                                    \"code\": \"170\",\n                                    \"display\": \"Colombia\"\n                                }\n                            ]\n                        }\n                    }\n                ],\n                \"identifier\": [\n                    {\n                        \"type\": {\n                            \"extension\": [\n                                {\n                                    \"url\": \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/Pais\",\n                                    \"valueCodeableConcept\": {\n                                        \"coding\": [\n                                            {\n                                                \"code\": \"170\"\n                                            }\n                                        ]\n                                    }\n                                }\n                            ],\n                            \"coding\": [\n                                {\n                                    \"system\": \"https://www.minsalud.gov.co/ihc/fhir/CodeSystem/ids-personaColombia\",\n                                    \"code\": \"CC\",\n                                    \"display\": \"Cédula ciudadanía\"\n                                }\n                            ]\n                        },\n                        \"value\": \"10001\",\n                        \"assigner\": {\n                            \"display\": \"Registraduria Nacional\"\n                        }\n                    }\n                ],\n                \"name\": [\n                    {\n                        \"family\": \"Cortez\",\n                        \"_family\": {\n                            \"extension\": [\n                                {\n                                    \"url\": \"http://hl7.org/fhir/StructureDefinition/humanname-mothers-family\"\n                                }\n                            ]\n                        },\n                        \"given\": [\n                            \"Ana\",\n                            \"Maria\"\n                        ]\n                    }\n                ],\n                \"gender\": \"male\",\n                \"birthDate\": \"1992-12-25\",\n                \"_birthDate\": {\n                    \"extension\": [\n                        {\n                            \"url\": \"http://hl7.org/fhir/StructureDefinition/patient-birthTime\",\n                            \"valueDateTime\": \"1992-12-25T14:35:45-05:00\"\n                        }\n                    ]\n                },\n                \"address\": [\n                    {\n                        \"extension\": [\n                            {\n                                \"url\": \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/ZonaResidencia\",\n                                \"valueCodeableConcept\": {\n                                    \"coding\": [\n                                        {\n                                            \"code\": \"02\"\n                                        }\n                                    ]\n                                }\n                            }\n                        ],\n                        \"city\": \"Medellín\",\n                        \"country\": \"152\"\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "refs y atributos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{serv_fhir}}/DocumentReference?subject.gender=male&custodian.name=Bogota",
+							"host": [
+								"{{serv_fhir}}"
+							],
+							"path": [
+								"DocumentReference"
+							],
+							"query": [
+								{
+									"key": "subject.gender",
+									"value": "male"
+								},
+								{
+									"key": "custodian.name",
+									"value": "Bogota"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ej1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{serv_fhir}}/DocumentReference?subject.gender=male&custodian.name=Bogota",
+									"host": [
+										"{{serv_fhir}}"
+									],
+									"path": [
+										"DocumentReference"
+									],
+									"query": [
+										{
+											"key": "subject.gender",
+											"value": "male"
+										},
+										{
+											"key": "custodian.name",
+											"value": "Bogota"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 20:05:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.2.2 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "lIladVAlM9RUGsz9"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Tue, 05 Mar 2024 20:05:43 GMT"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Bundle\",\n    \"id\": \"ff963fa0-1d96-437f-8e43-170154c589e6\",\n    \"meta\": {\n        \"lastUpdated\": \"2024-03-05T20:05:43.705+00:00\"\n    },\n    \"type\": \"searchset\",\n    \"link\": [\n        {\n            \"relation\": \"self\",\n            \"url\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference?custodian.name=Bogota&subject.gender=male\"\n        },\n        {\n            \"relation\": \"next\",\n            \"url\": \"http://vulcano.ihcecol.gov.co/fhir?_getpages=ff963fa0-1d96-437f-8e43-170154c589e6&_getpagesoffset=20&_count=20&_pretty=true&_bundletype=searchset\"\n        }\n    ],\n    \"entry\": [\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1043\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1043\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-15T15:24:39.888+00:00\",\n                    \"source\": \"#yrg5GBueXVn4KxOq\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">DocumentReference</div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1042\"\n                },\n                \"date\": \"2024-01-15T15:21:49-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1044\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1067\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1067\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-15T19:39:25.580+00:00\",\n                    \"source\": \"#FzE6BXKBPM7chQnh\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">DocumentReference</div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1065\"\n                },\n                \"date\": \"2024-01-15T19:39:18-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1068\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1033\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1033\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-15T15:24:33.154+00:00\",\n                    \"source\": \"#isFWO6saw4NTvZFD\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">DocumentReference</div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1032\"\n                },\n                \"date\": \"2024-01-15T15:21:49-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1034\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1080\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1080\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-15T19:43:34.303+00:00\",\n                    \"source\": \"#9uubcJpktIZSfjmm\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">DocumentReference</div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1078\"\n                },\n                \"date\": \"2024-01-15T19:39:18-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1081\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1926\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1926\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-27T13:18:39.017+00:00\",\n                    \"source\": \"#FuRTGpidEFoAZl3m\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1924\"\n                },\n                \"date\": \"2024-02-27T13:18:37-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1927\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1930\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1930\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-27T13:18:39.775+00:00\",\n                    \"source\": \"#qFgMyuLpFjiqA7DS\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1928\"\n                },\n                \"date\": \"2024-02-27T13:18:38-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1931\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1934\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1934\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-27T13:18:40.428+00:00\",\n                    \"source\": \"#Wwlj7hyoCCNJyaMc\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1932\"\n                },\n                \"date\": \"2024-02-27T13:18:39-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1935\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1973\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1973\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-28T05:34:09.670+00:00\",\n                    \"source\": \"#2kV5QXRNzUPr7QmK\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1971\"\n                },\n                \"date\": \"2024-02-28T05:34:01-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1974\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1093\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1093\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-15T20:05:13.953+00:00\",\n                    \"source\": \"#ZSWIYUw9fKpod5PW\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">DocumentReference</div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1091\"\n                },\n                \"date\": \"2024-01-15T20:05:08-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1094\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1139\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1139\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T19:22:03.421+00:00\",\n                    \"source\": \"#rKfhGWI3eslmKNK6\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">DocumentReference</div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1137\"\n                },\n                \"date\": \"2024-01-16T19:21:51-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1140\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1146\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1146\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T19:41:49.562+00:00\",\n                    \"source\": \"#Xbn3sBqtSOQbjU1m\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">DocumentReference</div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1144\"\n                },\n                \"date\": \"2024-01-16T19:41:46-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1147\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1153\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1153\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T19:48:07.821+00:00\",\n                    \"source\": \"#dM2mIWfG20bSx3yT\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">DocumentReference</div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1151\"\n                },\n                \"date\": \"2024-01-16T19:47:57-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1154\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1160\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1160\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T20:27:41.782+00:00\",\n                    \"source\": \"#qvbkwTzcXWB6xSUS\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">DocumentReference</div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1158\"\n                },\n                \"date\": \"2024-01-16T20:27:36-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1161\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1177\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1177\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T21:00:15.596+00:00\",\n                    \"source\": \"#ViirwfFhgiLaQxP0\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">DocumentReference</div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1175\"\n                },\n                \"date\": \"2024-01-16T21:00:06-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1178\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1184\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1184\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T21:11:17.777+00:00\",\n                    \"source\": \"#Gl6oD26gdKJN5sKe\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">DocumentReference</div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1182\"\n                },\n                \"date\": \"2024-01-16T21:10:50-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1185\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1200\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1200\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T21:15:06.725+00:00\",\n                    \"source\": \"#jePWq9KgOymvhEov\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">DocumentReference</div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1198\"\n                },\n                \"date\": \"2024-01-16T21:15:00-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1201\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1216\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1216\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T21:16:52.085+00:00\",\n                    \"source\": \"#9yxCaEZAeg7iYOtd\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">DocumentReference</div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1214\"\n                },\n                \"date\": \"2024-01-16T21:15:00-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1217\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1232\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1232\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T21:30:31.296+00:00\",\n                    \"source\": \"#uFAauOaSGP4eSRoI\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">DocumentReference</div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1230\"\n                },\n                \"date\": \"2024-01-16T21:30:27-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1233\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1248\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1248\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-16T22:17:57.394+00:00\",\n                    \"source\": \"#Y69Aj55EuNpgnEAz\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1246\"\n                },\n                \"date\": \"2024-01-16T22:17:53-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1249\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/DocumentReference/1265\",\n            \"resource\": {\n                \"resourceType\": \"DocumentReference\",\n                \"id\": \"1265\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-01-17T13:36:36.463+00:00\",\n                    \"source\": \"#EDDoEEGDr1ijCzLM\",\n                    \"profile\": [\n                        \"https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo\"\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><b>Generated Narrative: DocumentReference</b></div>\"\n                },\n                \"status\": \"current\",\n                \"type\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://loinc.org\",\n                            \"code\": \"60591-5\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/1263\"\n                },\n                \"date\": \"2024-01-17T13:36:29-05:00\",\n                \"author\": [\n                    {\n                        \"reference\": \"Organization/inst-252690004901\"\n                    }\n                ],\n                \"custodian\": {\n                    \"reference\": \"Organization/reg-11001\"\n                },\n                \"content\": [\n                    {\n                        \"attachment\": {\n                            \"contentType\": \"application/fhir+json\",\n                            \"url\": \"Composition/1266\"\n                        }\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "metadata",
+			"item": [
+				{
+					"name": "CapabilityStatement",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{serv_fhir}}/metadata"
+					},
+					"response": [
+						{
+							"name": "identifier",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{serv_fhir}}/Patient?identifier=BRWX789012",
+									"host": [
+										"{{serv_fhir}}"
+									],
+									"path": [
+										"Patient"
+									],
+									"query": [
+										{
+											"key": "identifier",
+											"value": "BRWX789012"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 14:09:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.2.2 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "ONQAbQypRPrmeN62"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Tue, 05 Mar 2024 14:09:59 GMT"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Bundle\",\n    \"id\": \"36aef78e-77e2-481a-be97-a4eed7cacd49\",\n    \"meta\": {\n        \"lastUpdated\": \"2024-03-05T14:09:59.247+00:00\"\n    },\n    \"type\": \"searchset\",\n    \"total\": 1,\n    \"link\": [\n        {\n            \"relation\": \"self\",\n            \"url\": \"http://vulcano.ihcecol.gov.co/fhir/Patient?identifier=BRWX789012\"\n        }\n    ],\n    \"entry\": [\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Patient/38\",\n            \"resource\": {\n                \"resourceType\": \"Patient\",\n                \"id\": \"38\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2023-12-05T16:17:05.300+00:00\",\n                    \"source\": \"#M96tGEHJZ49nXjZL\",\n                    \"security\": [\n                        {\n                            \"system\": \"http://terminology.hl7.org/CodeSystem/v3-ActReason\",\n                            \"code\": \"HTEST\"\n                        }\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><div class=\\\"hapiHeaderText\\\">Carlos <b>DRUMMOND </b></div><table class=\\\"hapiPropertyTable\\\"><tbody><tr><td>Identifier</td><td>BRWX789012</td></tr><tr><td>Date of birth</td><td><span>07 September 1959</span></td></tr></tbody></table></div>\"\n                },\n                \"identifier\": [\n                    {\n                        \"type\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                                    \"code\": \"PPN\"\n                                }\n                            ]\n                        },\n                        \"system\": \"urn:oid:2.16.840.1.113883.3.9143.2.1.5\",\n                        \"value\": \"BRWX789012\"\n                    },\n                    {\n                        \"use\": \"official\",\n                        \"type\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                                    \"code\": \"PPN\"\n                                }\n                            ]\n                        },\n                        \"system\": \"urn:oid:2.16.840.1.113883.3.9143.2.1.1\",\n                        \"value\": \"BRWX789012\"\n                    }\n                ],\n                \"active\": true,\n                \"name\": [\n                    {\n                        \"use\": \"official\",\n                        \"text\": \"Carlos Drummond\",\n                        \"family\": \"Drummond\",\n                        \"given\": [\n                            \"Carlos\"\n                        ]\n                    }\n                ],\n                \"gender\": \"male\",\n                \"birthDate\": \"1959-09-07\"\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "search parameter",
+			"item": [
+				{
+					"name": "SearchParameter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{serv_fhir}}/SearchParameter"
+					},
+					"response": [
+						{
+							"name": "identifier",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{serv_fhir}}/Patient?identifier=BRWX789012",
+									"host": [
+										"{{serv_fhir}}"
+									],
+									"path": [
+										"Patient"
+									],
+									"query": [
+										{
+											"key": "identifier",
+											"value": "BRWX789012"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 14:09:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.2.2 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "ONQAbQypRPrmeN62"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Tue, 05 Mar 2024 14:09:59 GMT"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Bundle\",\n    \"id\": \"36aef78e-77e2-481a-be97-a4eed7cacd49\",\n    \"meta\": {\n        \"lastUpdated\": \"2024-03-05T14:09:59.247+00:00\"\n    },\n    \"type\": \"searchset\",\n    \"total\": 1,\n    \"link\": [\n        {\n            \"relation\": \"self\",\n            \"url\": \"http://vulcano.ihcecol.gov.co/fhir/Patient?identifier=BRWX789012\"\n        }\n    ],\n    \"entry\": [\n        {\n            \"fullUrl\": \"http://vulcano.ihcecol.gov.co/fhir/Patient/38\",\n            \"resource\": {\n                \"resourceType\": \"Patient\",\n                \"id\": \"38\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2023-12-05T16:17:05.300+00:00\",\n                    \"source\": \"#M96tGEHJZ49nXjZL\",\n                    \"security\": [\n                        {\n                            \"system\": \"http://terminology.hl7.org/CodeSystem/v3-ActReason\",\n                            \"code\": \"HTEST\"\n                        }\n                    ]\n                },\n                \"text\": {\n                    \"status\": \"generated\",\n                    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><div class=\\\"hapiHeaderText\\\">Carlos <b>DRUMMOND </b></div><table class=\\\"hapiPropertyTable\\\"><tbody><tr><td>Identifier</td><td>BRWX789012</td></tr><tr><td>Date of birth</td><td><span>07 September 1959</span></td></tr></tbody></table></div>\"\n                },\n                \"identifier\": [\n                    {\n                        \"type\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                                    \"code\": \"PPN\"\n                                }\n                            ]\n                        },\n                        \"system\": \"urn:oid:2.16.840.1.113883.3.9143.2.1.5\",\n                        \"value\": \"BRWX789012\"\n                    },\n                    {\n                        \"use\": \"official\",\n                        \"type\": {\n                            \"coding\": [\n                                {\n                                    \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                                    \"code\": \"PPN\"\n                                }\n                            ]\n                        },\n                        \"system\": \"urn:oid:2.16.840.1.113883.3.9143.2.1.1\",\n                        \"value\": \"BRWX789012\"\n                    }\n                ],\n                \"active\": true,\n                \"name\": [\n                    {\n                        \"use\": \"official\",\n                        \"text\": \"Carlos Drummond\",\n                        \"family\": \"Drummond\",\n                        \"given\": [\n                            \"Carlos\"\n                        ]\n                    }\n                ],\n                \"gender\": \"male\",\n                \"birthDate\": \"1959-09-07\"\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

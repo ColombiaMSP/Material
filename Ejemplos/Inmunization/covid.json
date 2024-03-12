@@ -1,0 +1,48 @@
+{
+    "resourceType": "Immunization",
+    "meta": {
+        "profile": [
+            "http://worldhealthorganization.github.io/ddcc/StructureDefinition/DDCCImmunization"
+        ]
+    },
+    "extension": [
+        {
+            "url": "http://worldhealthorganization.github.io/ddcc/StructureDefinition/DDCCEventBrand",
+            "valueCoding": {
+                "system": "http://worldhealthorganization.github.io/ddcc/CodeSystem/DDCC-Example-Test-CodeSystem",
+                "code": "XM4YL8"
+            }
+        },
+        {
+            "url": "http://worldhealthorganization.github.io/ddcc/StructureDefinition/DDCCVaccineMarketAuthorization",
+            "valueCoding": {
+                "system": "http://worldhealthorganization.github.io/ddcc/CodeSystem/DDCC-Example-Test-CodeSystem",
+                "code": "TEST"
+            }
+        },
+        {
+            "url": "http://worldhealthorganization.github.io/ddcc/StructureDefinition/DDCCCountryOfEvent",
+            "valueCode": "CO"
+        }
+    ],
+    "status": "completed",
+    "vaccineCode": {
+        "coding": [
+            {
+                "system": "http://id.who.int/icd11/mms",
+                "code": "XM9QW8",
+                "display": "COVID-19 vaccine, non-replicating viral vector"
+            }
+        ]
+    },
+    "lotNumber": "A1234",
+    "patient": {
+        "reference": "ef333870-0a3a-4ab3-b0ff-6bc191a738c6"
+    },
+    "occurrenceDateTime": "2020-11-15",
+    "protocolApplied": [
+        {
+            "doseNumberPositiveInt": 1
+        }
+    ]
+}

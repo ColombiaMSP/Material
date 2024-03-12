@@ -1,0 +1,315 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:ae504b9c-ff1b-4802-9ab5-393c1b013b87",
+            "resource": {
+                "resourceType": "DocumentReference",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: DocumentReference</b></div>"
+                },
+                "status": "current",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "60591-5"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:839af1b4-ce3a-405a-bc99-ec4d44530592",
+                    "display": "Marcos Antonio Solis Castillo"
+                },
+                "date": "2023-10-31T17:31:31.745+00:00",
+                "author": [
+                    {
+                        "reference": "Organization/inst-5000600169",
+                        "display": "HOSPITAL MUNICIPAL DE ACACIAS ESE"
+                    }
+                ],
+                "custodian": {
+                    "reference": "Organization/reg-50"
+                },
+                "content": [
+                    {
+                        "attachment": {
+                            "contentType": "application/fhir+json",
+                            "url": "urn:uuid:2809810a-e875-45f2-a8cd-d394a2b9e984"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "DocumentReference"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:118f5084-43e9-4e85-920f-1444536011f6",
+            "resource": {
+                "resourceType": "Practitioner",
+                "meta": {
+                    "profile": [
+                        "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/PractitionerCo"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: Practitioner</b></div>"
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "extension": [
+                                {
+                                    "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-pais",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/PaisesCS",
+                                                "code": "170"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "coding": [
+                                {
+                                    "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdspersonaColombia",
+                                    "code": "CC"
+                                }
+                            ]
+                        },
+                        "value": "1088200",
+                        "assigner": {
+                            "display": "Registraduria Nacional"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "Practitioner"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:2809810a-e875-45f2-a8cd-d394a2b9e984",
+            "resource": {
+                "resourceType": "Composition",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: Composition</b></div>"
+                },
+                "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "60591-5",
+                            "display": "Patient Summary Document"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:839af1b4-ce3a-405a-bc99-ec4d44530592"
+                },
+                "date": "2023-10-06T09:13:16.304Z",
+                "author": [
+                    {
+                        "reference": "urn:uuid:118f5084-43e9-4e85-920f-1444536011f6"
+                    }
+                ],
+                "title": "Resumen de Paciente Colombia",
+                "custodian": {
+                    "reference": "Organization/reg-50"
+                },
+                "section": [
+                    {
+                        "title": "History of Immunizations",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "11369-6",
+                                    "display": "History of Immunization Narrative"
+                                }
+                            ]
+                        },
+                        "text": {
+                            "status": "generated",
+                            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">To be populated at future time</div>"
+                        },
+                        "entry": [
+                            {
+                                "reference": "urn:uuid:6fef12e7-64ad-4792-b2ad-5d6b699588fc"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "Composition"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:6fef12e7-64ad-4792-b2ad-5d6b699588fc",
+            "resource": {
+                "resourceType": "Immunization",
+                "meta": {
+                    "profile": [
+                        "http://worldhealthorganization.github.io/ddcc/StructureDefinition/DDCCImmunization"
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "http://worldhealthorganization.github.io/ddcc/StructureDefinition/DDCCEventBrand",
+                        "valueCoding": {
+                            "system": "http://worldhealthorganization.github.io/ddcc/CodeSystem/DDCC-Example-Test-CodeSystem",
+                            "code": "XM4YL8"
+                        }
+                    },
+                    {
+                        "url": "http://worldhealthorganization.github.io/ddcc/StructureDefinition/DDCCVaccineMarketAuthorization",
+                        "valueCoding": {
+                            "system": "http://worldhealthorganization.github.io/ddcc/CodeSystem/DDCC-Example-Test-CodeSystem",
+                            "code": "TEST"
+                        }
+                    },
+                    {
+                        "url": "http://worldhealthorganization.github.io/ddcc/StructureDefinition/DDCCCountryOfEvent",
+                        "valueCode": "CO"
+                    }
+                ],
+                "status": "completed",
+                "vaccineCode": {
+                    "coding": [
+                        {
+                            "system": "http://id.who.int/icd11/mms",
+                            "code": "XM9QW8",
+                            "display": "COVID-19 vaccine, non-replicating viral vector"
+                        }
+                    ]
+                },
+                "lotNumber": "A1234",
+                "patient": {
+                    "reference": "urn:uuid:839af1b4-ce3a-405a-bc99-ec4d44530592"
+                },
+                "occurrenceDateTime": "2020-11-15",
+                "protocolApplied": [
+                    {
+                        "doseNumberPositiveInt": 1
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "Immunization"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:839af1b4-ce3a-405a-bc99-ec4d44530592",
+            "resource": {
+                "resourceType": "Patient",
+                "meta": {
+                    "profile": [
+                        "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/PacienteCo"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: Patient</b></div>"
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "extension": [
+                                {
+                                    "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-pais",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/PaisesCS",
+                                                "code": "170",
+                                                "display": "Colombia"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "coding": [
+                                {
+                                    "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdspersonaColombia",
+                                    "code": "CC",
+                                    "display": "Cédula ciudadanía"
+                                }
+                            ]
+                        },
+                        "value": "19383283",
+                        "assigner": {
+                            "display": "Registraduria Nacional"
+                        }
+                    },
+                    {
+                        "use": "official",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                    "code": "PPN"
+                                }
+                            ]
+                        },
+                        "system": "urn:oid.2.16.170",
+                        "value": "CO/F12-4016370-3"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Diaz",
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family",
+                                    "valueString": "Acosta"
+                                }
+                            ]
+                        },
+                        "given": [
+                            "Javier"
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1959-12-28",
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-address-zonaResidencia",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/ZonaResidenciaCS",
+                                            "code": "02",
+                                            "display": "Rural"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "city": "Cubarral",
+                        "country": "170"
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "Patient"
+            }
+        }
+    ]
+}

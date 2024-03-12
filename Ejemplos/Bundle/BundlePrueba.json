@@ -1,0 +1,489 @@
+{
+    "resourceType": "Bundle",
+    "meta": {
+      "profile": [
+        "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/BundleCo"
+      ]
+    },
+    "type": "transaction",
+    "entry": [
+      {
+        "fullUrl": "urn:uuid:ae504b9c-ff1b-4802-9ab5-393c1b013b87",
+        "resource": {
+          "resourceType": "DocumentReference",
+          "meta": {
+            "profile": [
+              "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo"
+            ]
+          },
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: DocumentReference</b></div>"
+          },
+          "status": "current",
+          "type": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "60591-5"
+              }
+            ]
+          },
+          "subject": {
+            "reference": "urn:uuid:839af1b4-ce3a-405a-bc99-ec4d44530592"
+          },
+          "date": "2023-10-31T17:31:31.745+00:00",
+          "author": [
+            {
+              "reference": "Organization/inst-2589902990",
+              "display": "HOSPITAL UNIVERSITARIO DE LA SAMARITANA"
+            }
+          ],
+          "custodian": {
+            "reference": "Organization/reg-25"
+          },
+          "content": [
+            {
+              "attachment": {
+                "contentType": "application/fhir+json",
+                "url": "urn:uuid:2809810a-e875-45f2-a8cd-d394a2b9e984"
+              }
+            }
+          ]
+        },
+        "request": {
+          "method": "POST",
+          "url": "DocumentReference"
+        }
+      },
+      {
+        "fullUrl": "urn:uuid:118f5084-43e9-4e85-920f-1444536011f6",
+        "resource": {
+          "resourceType": "Practitioner",
+          "meta": {
+            "profile": [
+              "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/PractitionerCo"
+            ]
+          },
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: Practitioner</b></div>"
+          },
+          "identifier": [
+            {
+              "type": {
+                "extension": [
+                  {
+                    "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-pais",
+                    "valueCodeableConcept": {
+                      "coding": [
+                        {
+                          "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/PaisesCS",
+                          "code": "170"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "coding": [
+                  {
+                    "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdspersonaColombia",
+                    "code": "CC"
+                  }
+                ]
+              },
+              "value": "8888888",
+              "assigner": {
+                "display": "Registraduria Nacional"
+              }
+            }
+          ],
+          "name": [
+            {
+              "family": "Valenzuela",
+              "given": [
+                "Cesar"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "method": "POST",
+          "url": "Practitioner"
+        }
+      },
+      {
+        "fullUrl": "urn:uuid:2809810a-e875-45f2-a8cd-d394a2b9e984",
+        "resource": {
+          "resourceType": "Composition",
+          "meta": {
+            "profile": [
+              "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo"
+            ]
+          },
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: Composition</b></div>"
+          },
+          "status": "final",
+          "type": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "60591-5",
+                "display": "Patient Summary Document"
+              }
+            ]
+          },
+          "subject": {
+            "reference": "urn:uuid:839af1b4-ce3a-405a-bc99-ec4d44530592"
+          },
+          "date": "2024-01-15T09:13:16.304Z",
+          "author": [
+            {
+              "reference": "urn:uuid:118f5084-43e9-4e85-920f-1444536011f6"
+            }
+          ],
+          "title": "Resumen de Paciente Colombia",
+          "custodian": {
+            "reference": "Organization/reg-25"
+          },
+          "section": [
+            {
+              "title": "Diagnosticos",
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "11450-4",
+                    "display": "Problem list - Reported"
+                  }
+                ]
+              },
+              "text": {
+                "status": "generated",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">DIAGNOSTICOS</div>"
+              },
+              "entry": [
+                {
+                  "reference": "urn:uuid:4066cdcc-c4f0-41a1-9c3b-b838b22a1192"
+                }
+              ]
+            },
+            {
+              "title": "Alergias",
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "48765-2",
+                    "display": "Allergies and adverse reactions Document."
+                  }
+                ]
+              },
+              "text": {
+                "status": "generated",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">ALERGIAS</div>"
+              },
+              "entry": [
+                {
+                  "reference": "urn:uuid:2011fcc8-3b75-4d5a-a94e-fa075800679d"
+                }
+              ]
+            },
+            {
+              "title": "Medicaciones",
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "10160-0",
+                    "display": "History of Medication use Narrative"
+                  }
+                ]
+              },
+              "text": {
+                "status": "generated",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MEDICACIONES</div>"
+              },
+              "entry": [
+                {
+                  "reference": "urn:uuid:05ada881-6611-4a06-8a03-61fb3441df44"
+                }
+              ]
+            }
+          ]
+        },
+        "request": {
+          "method": "POST",
+          "url": "Composition"
+        }
+      },
+      {
+        "fullUrl": "urn:uuid:2011fcc8-3b75-4d5a-a94e-fa075800679d",
+        "resource": {
+          "resourceType": "AllergyIntolerance",
+          "meta": {
+            "profile": [
+              "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/AlergiaCo"
+            ]
+          },
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: AllergyIntolerance</b></div>"
+          },
+          "extension": [
+            {
+              "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-AllergyIntolerance-tipo",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/AlergiasCS",
+                    "code": "01"
+                  }
+                ]
+              }
+            }
+          ],
+          "clinicalStatus": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+                "code": "active"
+              }
+            ]
+          },
+          "verificationStatus": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+                "code": "confirmed"
+              }
+            ]
+          },
+          "patient": {
+            "reference": "urn:uuid:839af1b4-ce3a-405a-bc99-ec4d44530592",
+            "display": "Paciente Colombiano"
+          }
+        },
+        "request": {
+          "method": "POST",
+          "url": "AllergyIntolerance"
+        }
+      },
+      {
+        "fullUrl": "urn:uuid:05ada881-6611-4a06-8a03-61fb3441df44",
+        "resource": {
+          "resourceType": "MedicationStatement",
+          "meta": {
+            "profile": [
+              "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/MedicationStatementCo"
+            ]
+          },
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: Medication</b></div>"
+          },
+          "status": "active",
+          "medicationCodeableConcept": {
+            "coding": [
+              {
+                "system": "https://www.minsalud.gov.co/CodeSystem/CUMS",
+                "code": "226609",
+                "display": "VALSARTAN, 80,00mg."
+              }
+            ]
+          },
+          "dosage": [
+            {
+              "extension": [
+                {
+                  "url": "http://example.org/fhir/extensions#concentration",
+                  "valueString": "80"
+                },
+                {
+                  "url": "http://example.org/fhir/extensions#dose-administered",
+                  "valueString": "1.0"
+                }
+              ]
+            }
+          ],
+          "subject": {
+            "reference": "urn:uuid:839af1b4-ce3a-405a-bc99-ec4d44530592"
+          }
+        },
+        "request": {
+          "method": "POST",
+          "url": "MedicationStatement"
+        }
+      },
+      {
+        "fullUrl": "urn:uuid:4066cdcc-c4f0-41a1-9c3b-b838b22a1192",
+        "resource": {
+          "resourceType": "Condition",
+          "meta": {
+            "profile": [
+              "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/ConditionCo"
+            ]
+          },
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: Condition</b></div>"
+          },
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "I10X",
+                "display": "Arterial hypertension"
+              }
+            ],
+            "text": "None"
+          },
+          "subject": {
+            "reference": "urn:uuid:839af1b4-ce3a-405a-bc99-ec4d44530592"
+          }
+        },
+        "request": {
+          "method": "POST",
+          "url": "Condition"
+        }
+      },
+      {
+        "fullUrl": "urn:uuid:839af1b4-ce3a-405a-bc99-ec4d44530592",
+        "resource": {
+          "resourceType": "Patient",
+          "meta": {
+            "profile": [
+              "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/PacienteCo"
+            ]
+          },
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: Patient</b></div>"
+          },
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/patient-disability",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/DiscapacidadCS",
+                    "code": "01"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/patient-genderIdentity",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdentidadGeneroCS",
+                    "code": "02"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-patient-nacionalidad",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/PaisesCS",
+                    "code": "170",
+                    "display": "Colombia"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-patient-etnia",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/EtniaCS",
+                    "code": "99",
+                    "display": "Ninguna"
+                  }
+                ]
+              }
+            }
+          ],
+          "identifier": [
+            {
+              "type": {
+                "extension": [
+                  {
+                    "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-pais",
+                    "valueCodeableConcept": {
+                      "coding": [
+                        {
+                          "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/PaisesCS",
+                          "code": "170",
+                          "display": "Colombia"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "coding": [
+                  {
+                    "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdspersonaColombia",
+                    "code": "CC",
+                    "display": "Cédula ciudadanía"
+                  }
+                ]
+              },
+              "value": "99001122",
+              "assigner": {
+                "display": "Registraduria Nacional"
+              }
+            }
+          ],
+          "name": [
+            {
+              "family": "Asturias",
+              "_family": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family",
+                    "valueString": "Asturias"
+                  }
+                ]
+              },
+              "given": [
+                "Miguel Angel"
+              ]
+            }
+          ],
+          "gender": "male",
+          "birthDate": "1942-06-13",
+          "address": [
+            {
+              "extension": [
+                {
+                  "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-address-zonaResidencia",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/ZonaResidenciaCS",
+                        "code": "01",
+                        "display": "Urbana"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "city": "Bogotá",
+              "country": "170"
+            }
+          ]
+        },
+        "request": {
+          "method": "POST",
+          "url": "Patient"
+        }
+      }
+    ]
+  }

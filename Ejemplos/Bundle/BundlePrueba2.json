@@ -1,0 +1,493 @@
+{
+  "resourceType": "Bundle",
+  "meta": {
+      "profile": [
+          "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/BundleCo"
+      ]
+  },
+  "type": "transaction",
+  "entry": [
+      {
+          "fullUrl": "urn:uuid:1fdb1485-e009-4f35-b85f-049e79fe25db",
+          "resource": {
+              "resourceType": "DocumentReference",
+              "meta": {
+                  "profile": [
+                      "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/DocumentReferenceCo"
+                  ]
+              },
+              "text": {
+                  "status": "generated",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: DocumentReference</b></div>"
+              },
+              "status": "current",
+              "type": {
+                  "coding": [
+                      {
+                          "system": "http://loinc.org",
+                          "code": "60591-5"
+                      }
+                  ]
+              },
+              "subject": {
+                  "reference": "urn:uuid:37427ea5-2c83-431e-a36a-5bfa3f56b2fe",
+                  "display": "Aquiles Nazoa"
+              },
+              "date": "2023-10-31T17:31:31.745+00:00",
+              "author": [
+                  {
+                      "reference": "Organization/inst-680010070101",
+                      "display": "INSTITUTO DE SALUD DE BUCARAMANGA - ISABU"
+                  }
+              ],
+              "custodian":{
+                  "reference": "Organization/reg-68",
+                  "display": "reg-Santander"
+              },
+              "content": [
+                  {
+                      "attachment": {
+                          "contentType": "application/fhir+json",
+                          "url": "urn:uuid:45815272-4deb-4d61-8fd3-40462fe900eb"
+                      }
+                  }
+              ]
+          },
+          "request": {
+              "method": "POST",
+              "url": "DocumentReference"
+          }
+      },
+      {
+          "fullUrl": "urn:uuid:1e141460-c9d4-4abb-9393-fb0c657f93de",
+          "resource": {
+              "resourceType": "Practitioner",
+              "meta": {
+                  "profile": [
+                      "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/PractitionerCo"
+                  ]
+              },
+              "text": {
+                  "status": "generated",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: Practitioner</b></div>"
+              },
+              "identifier": [
+                  {
+                      "type": {
+                          "extension": [
+                              {
+                                  "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-pais",
+                                  "valueCodeableConcept": {
+                                      "coding": [
+                                          {
+                                              "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/PaisesCS",
+                                              "code": "170"
+                                          }
+                                      ]
+                                  }
+                              }
+                          ],
+                          "coding": [
+                              {
+                                  "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdspersonaColombia",
+                                  "code": "CC"
+                              }
+                          ]
+                      },
+                      "value": "9999999",
+                      "assigner": {
+                          "display": "Registraduria Nacional"
+                      }
+                  }
+              ],
+              "name": [
+                  {
+                      "family": "Martinez",
+                      "given": [
+                          "Andres Martinez"
+                      ]
+                  }
+              ]
+          },
+          "request": {
+              "method": "POST",
+              "url": "Practitioner"
+          }
+      },
+      {
+          "fullUrl": "urn:uuid:45815272-4deb-4d61-8fd3-40462fe900eb",
+          "resource": {
+              "resourceType": "Composition",
+              "meta": {
+                  "profile": [
+                      "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/CompositionCo"
+                  ]
+              },
+              "text": {
+                  "status": "generated",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: Composition</b></div>"
+              },
+              "status": "final",
+              "type": {
+                  "coding": [
+                      {
+                          "system": "http://loinc.org",
+                          "code": "60591-5",
+                          "display": "Patient Summary Document"
+                      }
+                  ]
+              },
+              "subject": {
+                  "reference": "urn:uuid:37427ea5-2c83-431e-a36a-5bfa3f56b2fe"
+              },
+              "date": "2023-11-27T09:13:16.304Z",
+              "author": [
+                  {
+                      "reference": "urn:uuid:1e141460-c9d4-4abb-9393-fb0c657f93de"
+                  }
+              ],
+              "title": "Resumen de Paciente Colombia",
+              "custodian": {
+                  "reference": "Organization/reg-50"
+              },
+              "section": [
+                  {
+                      "title": "Diagnosticos",
+                      "code": {
+                          "coding": [
+                              {
+                                  "system": "http://loinc.org",
+                                  "code": "11450-4",
+                                  "display": "Problem list - Reported"
+                              }
+                          ]
+                      },
+                      "text": {
+                          "status": "generated",
+                          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">DIAGNOSTICOS</div>"
+                      },
+                      "entry": [
+                          {
+                              "reference": "urn:uuid:95464ee4-f035-4dc6-8958-521ac4282158"
+                          }
+                      ]
+                  },
+                  {
+                      "title": "Alergias",
+                      "code": {
+                          "coding": [
+                              {
+                                  "system": "http://loinc.org",
+                                  "code": "48765-2",
+                                  "display": "Allergies and adverse reactions Document."
+                              }
+                          ]
+                      },
+                      "text": {
+                          "status": "generated",
+                          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">ALERGIAS</div>"
+                      },
+                      "entry": [
+                          {
+                              "reference": "urn:uuid:7a7487b5-a236-488f-a69c-68ef08f59560"
+                          }
+                      ]
+                  },
+                  {
+                      "title": "Medicaciones",
+                      "code": {
+                          "coding": [
+                              {
+                                  "system": "http://loinc.org",
+                                  "code": "10160-0",
+                                  "display": "History of Medication use Narrative"
+                              }
+                          ]
+                      },
+                      "text": {
+                          "status": "generated",
+                          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MEDICACIONES</div>"
+                      },
+                      "entry": [
+                          {
+                              "reference": "urn:uuid:2202c716-aab3-4de4-b13d-646fdaf832c1"
+                          }
+                      ]
+                  }
+              ]
+          },
+          "request": {
+              "method": "POST",
+              "url": "Composition"
+          }
+      },
+      {
+          "fullUrl": "urn:uuid:7a7487b5-a236-488f-a69c-68ef08f59560",
+          "resource": {
+              "resourceType": "AllergyIntolerance",
+              "meta": {
+                  "profile": [
+                      "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/AlergiaCo"
+                  ]
+              },
+              "text": {
+                  "status": "generated",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: AllergyIntolerance</b></div>"
+              },
+              "extension": [
+                  {
+                      "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-AllergyIntolerance-tipo",
+                      "valueCodeableConcept": {
+                          "coding": [
+                              {
+                                  "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/AlergiasCS",
+                                  "code": "02",
+                                  "display": "Alimento Mariscos "
+                              }
+                          ]
+                      }
+                  }
+              ],
+              "clinicalStatus": {
+                  "coding": [
+                      {
+                          "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+                          "code": "active"
+                      }
+                  ]
+              },
+              "verificationStatus": {
+                  "coding": [
+                      {
+                          "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+                          "code": "confirmed"
+                      }
+                  ]
+              },
+              "patient": {
+                  "reference": "urn:uuid:37427ea5-2c83-431e-a36a-5bfa3f56b2fe",
+                  "display": "Paciente Colombiano"
+              }
+          },
+          "request": {
+              "method": "POST",
+              "url": "AllergyIntolerance"
+          }
+      },
+      {
+          "fullUrl": "urn:uuid:2202c716-aab3-4de4-b13d-646fdaf832c1",
+          "resource": {
+              "resourceType": "MedicationStatement",
+              "meta": {   
+                  "profile": [
+                      "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/MedicationStatementCo"
+                  ]
+              },
+              "text": {
+                  "status": "generated",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: Medication</b></div>"
+              },
+              "status": "active",
+              "medicationCodeableConcept": {
+                  "coding": [
+                      {
+                          "system": "http://snomed.info/sct",
+                          "code": "19927831",
+                          "display": "NAPROXENO BASE, 250,00mg"
+                      }
+                  ]
+              },
+              "dosage": [
+                  {
+                    "extension": [
+                      {
+                        "url": "http://example.org/fhir/extensions#concentration",
+                        "valueString": "250"
+                      },
+                      {
+                        "url": "http://example.org/fhir/extensions#dose-administered",
+                        "valueString": "1.0"
+                      }
+                    ]
+                  }
+                ],
+            
+              "subject": {
+                  "reference": "urn:uuid:37427ea5-2c83-431e-a36a-5bfa3f56b2fe"
+              }
+          },
+          "request": {
+              "method": "POST",
+              "url": "MedicationStatement"
+          }
+      },
+      {
+          "fullUrl": "urn:uuid:95464ee4-f035-4dc6-8958-521ac4282158",
+          "resource": {
+              "resourceType": "Condition",
+              "meta": {
+                  "profile": [
+                      "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/ConditionCo"
+                  ]
+              },
+              "text": {
+                  "status": "generated",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: Condition</b></div>"
+              },
+              "code": {
+                  "coding": [
+                      {
+                          "system": "http://hl7.org/fhir/sid/icd-10",
+                          "code": "R221",
+                          "display": "Masa en cuello"
+                      }
+                  ],
+                  "text": "None"
+              },
+              "subject": {
+                  "reference": "urn:uuid:37427ea5-2c83-431e-a36a-5bfa3f56b2fe"
+              }
+          },
+          "request": {
+              "method": "POST",
+              "url": "Condition"
+          }
+      },
+      {
+          "fullUrl": "urn:uuid:37427ea5-2c83-431e-a36a-5bfa3f56b2fe",
+          "resource": {
+              "resourceType": "Patient",
+              "meta": {
+                  "profile": [
+                      "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/PacienteCo"
+                  ]
+              },
+              "text": {
+                  "status": "generated",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><b>Generated Narrative: Patient</b></div>"
+              },
+              "extension": [
+                  {
+                      "url": "http://hl7.org/fhir/StructureDefinition/patient-disability",
+                      "valueCodeableConcept": {
+                          "coding": [
+                              {
+                                  "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/DiscapacidadCS",
+                                  "code": "08"
+                              }
+                          ]
+                      }
+                  },
+                  {
+                      "url": "http://hl7.org/fhir/StructureDefinition/patient-genderIdentity",
+                      "valueCodeableConcept": {
+                          "coding": [
+                              {
+                                  "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdentidadGeneroCS",
+                                  "code": "02"
+                              }
+                          ]
+                      }
+                  },
+                  {
+                      "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-patient-nacionalidad",
+                      "valueCodeableConcept": {
+                          "coding": [
+                              {
+                                  "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/PaisesCS",
+                                  "code": "170",
+                                  "display": "Colombia"
+                              }
+                          ]
+                      }
+                  },
+                  {
+                      "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-patient-etnia",
+                      "valueCodeableConcept": {
+                          "coding": [
+                              {
+                                  "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/EtniaCS",
+                                  "code":"99",
+                                  "display": "Ninguna"
+                              }
+                          ]
+                      }
+                  }
+              ],
+              "identifier": [
+                  {
+                      "type": {
+                          "extension": [
+                              {
+                                  "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-pais",
+                                  "valueCodeableConcept": {
+                                      "coding": [
+                                          {
+                                              "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/PaisesCS",
+                                              "code": "170",
+                                              "display" : "Colombia"
+                                          }
+                                      ]
+                                  }
+                              }
+                          ],
+                          "coding": [
+                              {
+                                  "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdspersonaColombia",
+                                  "code": "CC",
+                                  "display": "Cédula ciudadanía"
+                              }
+                          ]
+                      },
+                      "value": "33445566",
+                      "assigner": {
+                          "display": "Registraduria Nacional"
+                      }
+                  }
+              ],
+              "name": [
+                  {
+                      "family": "Nazoa",
+                      "_family": {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family",
+                                  "valueString": "Nazoa"
+                              }
+                          ]
+                      },
+                      "given": [
+                          "Aquiles "
+                      ]
+                  }
+              ],
+              "gender": "male",
+              "birthDate": "1969-10-30",
+              "address": [
+                  {
+                      "extension": [
+                          {
+                              "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-address-zonaResidencia",
+                              "valueCodeableConcept": {
+                                  "coding": [
+                                      {
+                                          "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/ZonaResidenciaCS",
+                                          "code": "01",
+                                          "display": "Urbana"
+                                      }
+                                  ]
+                              }
+                          }
+                      ],
+                      "city": "Cali",
+                      "country": "170"
+                  }
+              ]
+          },
+          "request": {
+              "method": "POST",
+              "url": "Patient"
+          }
+      }
+  ]
+}

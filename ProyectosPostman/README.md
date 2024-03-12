@@ -15,3 +15,6 @@ Contiene ejemplos para verificar sobre el servidor HAPI Local desplegado
 
 3. **vulcano.postman_environment.json**
 Contiene las variables de Servidores de Prueba, Vulcano. A incluir dentro de postman como entorno: "environment".
+
+3. **Búsquedas_FHIR.postman_collection.json**
+Contiene ejemplos de parámetros de búsquedas. De diferentes tipos de datos. Asi como ejemplos de searchparameters.

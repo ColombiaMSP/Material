@@ -1,0 +1,129 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:9fa12cbc-f37b-11ec-b939-0242ac120003",
+            "resource": {
+                "resourceType": "Immunization",
+                "meta": {
+                    "profile": [
+                        "http://worldhealthorganization.github.io/ddcc/StructureDefinition/DDCCImmunization"
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "http://worldhealthorganization.github.io/ddcc/StructureDefinition/DDCCEventBrand",
+                        "valueCoding": {
+                            "system": "http://worldhealthorganization.github.io/ddcc/CodeSystem/DDCC-Example-Test-CodeSystem",
+                            "code": "XM4YL8"
+                        }
+                    },
+                    {
+                        "url": "http://worldhealthorganization.github.io/ddcc/StructureDefinition/DDCCVaccineMarketAuthorization",
+                        "valueCoding": {
+                            "system": "http://worldhealthorganization.github.io/ddcc/CodeSystem/DDCC-Example-Test-CodeSystem",
+                            "code": "TEST"
+                        }
+                    },
+                    {
+                        "url": "http://worldhealthorganization.github.io/ddcc/StructureDefinition/DDCCCountryOfEvent",
+                        "valueCode": "CO"
+                    }
+                ],
+                "status": "completed",
+                "vaccineCode": {
+                    "coding": [
+                        {
+                            "system": "http://id.who.int/icd11/mms",
+                            "code": "XM9QW8",
+                            "display": "COVID-19 vaccine, non-replicating viral vector"
+                        }
+                    ]
+                },
+                "lotNumber": "A1234",
+                "patient": {
+                    "reference": "urn:uuid:9fa12cbc-f37b-11ec-b939-0242ac120002"
+                },
+                "occurrenceDateTime": "2020-11-15",
+                "protocolApplied": [
+                    {
+                        "doseNumberPositiveInt": 1
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "Immunization"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:9fa12cbc-f37b-11ec-b939-0242ac120002",
+            "resource": {
+                "resourceType": "Patient",
+                "meta": {
+                    "profile": [
+                        "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/PacienteCo"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Paciente</div>"
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "extension": [
+                                {
+                                    "url": "https://www.minsalud.gov.co/ihc/fhir/StructureDefinition/co-pais",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/PaisesCS",
+                                                "code": "170"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "coding": [
+                                {
+                                    "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdspersonaColombia",
+                                    "code": "CC"
+                                    
+                                }
+                            ]
+                        },
+                        "value": "333333",
+                        "assigner": {
+                            "display": "Registraduria Nacional"
+                        }
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Medina",
+                        "_family": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family",
+                                    "valueString": "Negrete"
+                                }
+                            ]
+                        },
+                        "given": [
+                            "Alejandro",
+                            "Sebastian"
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1993-04-04"
+            },
+            "request": {
+                "method": "POST",
+                "url": "Patient"
+            }
+        }
+    ]
+}

@@ -1,0 +1,225 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:9fa12cbc-f37b-11ec-b939-0242ac120003",
+            "resource": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                    "code": "PPN",
+                                    "display": "Passport Number"
+                                }
+                            ]
+                        },
+                        "system": "http://example.com/fhir/identifier-system",
+                        "value": "Identificación Persona"
+                    }
+                ],
+                "name": [
+                    {
+                        "use": "official",
+                        "family": "Apellidos Persona",
+                        "given": [
+                            "Nombres Persona"
+                        ]
+                    }
+                ],
+                "birthDate": "1993-04-04",
+                "gender": "male",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/us-core-birthsex",
+                        "valueCode": "Sexo Biológico Persona"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/us-core-race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "Pertenencia étnica",
+                                    "display": "Pertenencia étnica"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/us-core-birthplace",
+                        "valueAddress": {
+                            "country": "País de nacimiento",
+                            "district": "Departamento de nacimiento"
+                        }
+                    },
+                    {
+                        "url": "http://example.com/fhir/StructureDefinition/residence-country",
+                        "valueString": "País de Residencia"
+                    },
+                    {
+                        "url": "http://example.com/fhir/StructureDefinition/residence-address",
+                        "valueAddress": {
+                            "country": "País de Residencia",
+                            "city": "Área de Residencia",
+                            "line": [
+                                "Dirección de Residencia"
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://example.com/fhir/StructureDefinition/phone",
+                        "valueString": "Teléfono fijo",
+                        "system": "phone"
+                    },
+                    {
+                        "url": "http://example.com/fhir/StructureDefinition/cellphone",
+                        "valueString": "Teléfono Celular",
+                        "system": "phone"
+                    },
+                    {
+                        "url": "http://example.com/fhir/StructureDefinition/email",
+                        "valueString": "Email",
+                        "system": "email"
+                    },
+                    {
+                        "url": "http://example.com/fhir/StructureDefinition/birth-time",
+                        "valueTime": "Hora de Nacimiento persona"
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "Patient"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Person",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                    "code": "PPN",
+                                    "display": "Passport Number"
+                                }
+                            ]
+                        },
+                        "system": "http://example.com/fhir/identifier-system",
+                        "value": "Número de Identificación Madre"
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "http://example.com/fhir/StructureDefinition/mother-id-number",
+                        "valueString": "Número de Identificación Madre"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/us-core-race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "Pertenencia étnica",
+                                    "display": "Pertenencia étnica"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "Person"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Immunization",
+                "identifier": [
+                    {
+                        "system": "http://example.com/fhir/identifier-system",
+                        "value": "ID Dosis aplicada"
+                    }
+                ],
+                "status": "completed",
+                "vaccineCode": {
+                    "coding": [
+                        {
+                            "system": "http://example.com/fhir/ValueSet/vaccine-type",
+                            "code": "Tipo de dosis",
+                            "display": "Tipo de dosis"
+                        }
+                    ]
+                },
+                "lotNumber": "Lote de biológico",
+                "expirationDate": "2025-04-04",
+                "occurrenceDateTime": "2023-04-04",
+                "reported": true,
+                "location": {
+                    "identifier": {
+                        "system": "http://example.com/fhir/identifier-system",
+                        "value": "Código de Institución Vacunadora"
+                    }
+                },
+                "performer": [
+                    {
+                        "function": {
+                            "coding": [
+                                {
+                                    "system": "http://example.com/fhir/CodeSystem/vaccinator-function",
+                                    "code": "vaccinator"
+                                }
+                            ]
+                        },
+                        "actor": {
+                            "identifier": {
+                                "system": "http://example.com/fhir/identifier-system",
+                                "value": "Documento del Vacunador"
+                            }
+                        }
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "http://example.com/fhir/StructureDefinition/vaccine-record-type",
+                        "valueString": "Tipo de registro"
+                    },
+                    {
+                        "url": "http://example.com/fhir/StructureDefinition/vaccine-dose-number",
+                        "valueInteger": "01"
+                    },
+                    {
+                        "url": "http://example.com/fhir/StructureDefinition/vaccine-diluent-lot",
+                        "valueString": "Lote de diluyente"
+                    },
+                    {
+                        "url": "http://example.com/fhir/StructureDefinition/vaccine-diluent-expiration",
+                        "valueDate": "2023-04-04"
+                    },
+                    {
+                        "url": "http://example.com/fhir/StructureDefinition/vaccine-registration-date",
+                        "valueDateTime": "2024-04-04"
+                    },
+                    {
+                        "url": "http://example.com/fhir/StructureDefinition/vaccine-vaccinator-org",
+                        "valueString": "Código de Institución que registra"
+                    },
+                    {
+                        "url": "http://example.com/fhir/StructureDefinition/vaccine-vaccinator-id-type",
+                        "valueString": "Tipo de Documento del Vacunador"
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "Immunization"
+            }
+        }
+    ]
+}

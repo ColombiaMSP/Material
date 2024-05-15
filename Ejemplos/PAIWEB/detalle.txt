@@ -2,3 +2,9 @@ Caso 1 -- Inmunization y patient
 Caso 2 -- Inmunization y patient
 Caso 3 -- Inmunization, patient, y 2 parameter
 Caso 4 -- Inmunization, patient - con datos de la madre -, y 2 parameter
+
+Caso 5 -- Inmunization: covid, 
+        - patient: adulto
+        - 2 parameter: ... 
+        
+Caso Resumido-PAI -- Trabajo de Diego. 

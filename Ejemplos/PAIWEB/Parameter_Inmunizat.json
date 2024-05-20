@@ -1,4 +1,22 @@
+{
+    "resourceType": "Parameters",
+    "id": "inmunization_faltantes",
+    "parameter": [
+        {
+            //Régimen de Afiliación --> RegAfiPer	
+            "name": "RegAfiPer",
+            "valueString": "...."
+        },
+        {
+            //Aseguradora	 -->  AsegPer	
+            "name": "AsegPer",
+            "valueString": "...."
+        }
 
+       
+    ]
+}
+	
 	
 	
 	

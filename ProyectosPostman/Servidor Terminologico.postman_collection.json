@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "1de2f5c1-fd6b-4c92-aa25-4ad7cdee8f53",
+		"name": "Servidor Terminologico",
+		"description": "VALUESET\n\nlistar ValueSet del servidor  \n[https://orion.ihcecol.gov.co/fhir/ValueSet?_summary=true](https://orion.ihcecol.gov.co/fhir/ValueSet?_summary=true)\n\nexpand: simple  \n[https://orion.ihcecol.gov.co/fhir/ValueSet/$expand?url=https://www.minsalud.gov.co/ValueSet/CUMS](https://orion.ihcecol.gov.co/fhir/ValueSet/$expand?url=https://www.minsalud.gov.co/ValueSet/CUMS)\n\nexpand: obtener el total de terminos de un VS  \n[https://orion.ihcecol.gov.co/fhir/ValueSet/$expand?url=https://www.minsalud.gov.co/ValueSet/CUMS&amp;count=0](https://orion.ihcecol.gov.co/fhir/ValueSet/$expand?url=https://www.minsalud.gov.co/ValueSet/CUMS&count=0)\n\nexpand: paginado usando count y offset  \n[https://orion.ihcecol.gov.co/fhir/ValueSet/$expand?url=https://www.minsalud.gov.co/ValueSet/CUMS&amp;count=10&amp;offset=2000](https://orion.ihcecol.gov.co/fhir/ValueSet/$expand?url=https://www.minsalud.gov.co/ValueSet/CUMS&count=10&offset=2000)\n\n_expand: uso de filtro_  \n[https://orion.ihcecol.gov.co/fhir/ValueSet/$expand?url=https://www.minsalud.gov.co/ValueSet/CUMS&amp;filter=carbidopa](https://orion.ihcecol.gov.co/fhir/ValueSet/$expand?url=https://www.minsalud.gov.co/ValueSet/CUMS&filter=carbidopa)\n\nvalidate-code: validar codigo contra un vs  \n[https://orion.ihcecol.gov.co/fhir/ValueSet/$validate-code?url=https://www.minsalud.gov.co/ValueSet/CUMS&amp;system=https://www.minsalud.gov.co/CodeSystem/CUMS&amp;code=1980397-1](https://orion.ihcecol.gov.co/fhir/ValueSet/$validate-code?url=https://www.minsalud.gov.co/ValueSet/CUMS&system=https://www.minsalud.gov.co/CodeSystem/CUMS&code=1980397-1)\n\nvalidate-code: validar codigo y display correcto contra un vs  \n[https://orion.ihcecol.gov.co/fhir/ValueSet/$validate-code?url=https://www.minsalud.gov.co/ValueSet/CUMS&amp;system=https://www.minsalud.gov.co/CodeSystem/CUMS&amp;code=1980397-1&amp;display=CARBIDOPA](https://orion.ihcecol.gov.co/fhir/ValueSet/$validate-code?url=https://www.minsalud.gov.co/ValueSet/CUMS&system=https://www.minsalud.gov.co/CodeSystem/CUMS&code=1980397-1&display=CARBIDOPA) X 25 MG Y LEVODOPA X 250 MG\n\nvalidate-code: validar codigo y display incorrecto contra un vs  \n[https://orion.ihcecol.gov.co/fhir/ValueSet/$validate-code?url=https://www.minsalud.gov.co/ValueSet/CUMS&amp;system=https://www.minsalud.gov.co/CodeSystem/CUMS&amp;code=1980397-1&amp;display=texto-no-coincidente](https://orion.ihcecol.gov.co/fhir/ValueSet/$validate-code?url=https://www.minsalud.gov.co/ValueSet/CUMS&system=https://www.minsalud.gov.co/CodeSystem/CUMS&code=1980397-1&display=texto-no-coincidente)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13327082"
+	},
+	"item": [
+		{
+			"name": "CodeSystem - lookup",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{serv_fhir}}CodeSystem/$lookup?system=https://www.minsalud.gov.co/ihc/fhir/CodeSystem/AlergiasCS&code=02",
+					"host": [
+						"{{serv_fhir}}CodeSystem"
+					],
+					"path": [
+						"$lookup"
+					],
+					"query": [
+						{
+							"key": "system",
+							"value": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/AlergiasCS"
+						},
+						{
+							"key": "code",
+							"value": "02"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CodeSystem - lookup Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{serv_fhir}}ValueSet"
+			},
+			"response": []
+		},
+		{
+			"name": "CodeSystem validate-code OK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{serv_fhir}}CodeSystem/$validate-code?url=https://www.minsalud.gov.co/ihc/fhir/CodeSystem/DiscapacidadCS&code=01",
+					"host": [
+						"{{serv_fhir}}CodeSystem"
+					],
+					"path": [
+						"$validate-code"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/DiscapacidadCS"
+						},
+						{
+							"key": "code",
+							"value": "01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CodeSystem validate-code X",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vulcano.ihcecol.gov.co/fhir/CodeSystem/$lookup?https://www.minsalud.gov.co/ihc/fhir/CodeSystem/AlergiasCS&code=01",
+					"protocol": "https",
+					"host": [
+						"vulcano",
+						"ihcecol",
+						"gov",
+						"co"
+					],
+					"path": [
+						"fhir",
+						"CodeSystem",
+						"$lookup"
+					],
+					"query": [
+						{
+							"key": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/AlergiasCS",
+							"value": null
+						},
+						{
+							"key": "code",
+							"value": "01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CodeSystem - Snowstorm validate-code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://snowstorm.ihtsdotools.org/fhir/CodeSystem/$validate-code?url=http://snomed.info/sct&code=404684003",
+					"protocol": "https",
+					"host": [
+						"snowstorm",
+						"ihtsdotools",
+						"org"
+					],
+					"path": [
+						"fhir",
+						"CodeSystem",
+						"$validate-code"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "http://snomed.info/sct"
+						},
+						{
+							"key": "code",
+							"value": "404684003"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ValueSet expand",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{serv_fhir}}ValueSet/$expand?url=https://www.minsalud.gov.co/ihc/fhir/ValueSet/AlergiasVS",
+					"host": [
+						"{{serv_fhir}}ValueSet"
+					],
+					"path": [
+						"$expand"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://www.minsalud.gov.co/ihc/fhir/ValueSet/AlergiasVS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "expand simple Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://orion.ihcecol.gov.co/fhir/ValueSet/$expand?url=https://www.minsalud.gov.co/ValueSet/CUMS",
+					"protocol": "https",
+					"host": [
+						"orion",
+						"ihcecol",
+						"gov",
+						"co"
+					],
+					"path": [
+						"fhir",
+						"ValueSet",
+						"$expand"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://www.minsalud.gov.co/ValueSet/CUMS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cie10 - VS publicos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://clinicaltables.nlm.nih.gov/fhir/R4/ValueSet/icd10cm/$expand?_format=json&count=5",
+					"protocol": "https",
+					"host": [
+						"clinicaltables",
+						"nlm",
+						"nih",
+						"gov"
+					],
+					"path": [
+						"fhir",
+						"R4",
+						"ValueSet",
+						"icd10cm",
+						"$expand"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						},
+						{
+							"key": "count",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "expand: obtener el total de terminos de un VS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://orion.ihcecol.gov.co/fhir/ValueSet/$expand?url=https://www.minsalud.gov.co/ValueSet/CUMS&count=0",
+					"protocol": "https",
+					"host": [
+						"orion",
+						"ihcecol",
+						"gov",
+						"co"
+					],
+					"path": [
+						"fhir",
+						"ValueSet",
+						"$expand"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://www.minsalud.gov.co/ValueSet/CUMS"
+						},
+						{
+							"key": "count",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "expand: obtener el total de terminos de un VS Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://orion.ihcecol.gov.co/fhir/ValueSet/$expand?url=https://www.minsalud.gov.co/ValueSet/CUMS&count=0",
+					"protocol": "https",
+					"host": [
+						"orion",
+						"ihcecol",
+						"gov",
+						"co"
+					],
+					"path": [
+						"fhir",
+						"ValueSet",
+						"$expand"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://www.minsalud.gov.co/ValueSet/CUMS"
+						},
+						{
+							"key": "count",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "d2ab91f8-620f-426e-a3a5-1e419a279fb8",
+		"name": "sesion2 . Intro FHIR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13327082",
+		"_collection_link": "https://www.postman.com/bold-meadow-353670/workspace/sesion2-introfhir/collection/13327082-d2ab91f8-620f-426e-a3a5-1e419a279fb8?action=share&source=collection_link&creator=13327082"
+	},
+	"item": [
+		{
+			"name": "Guardar",
+			"item": [
+				{
+					"name": "1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"resourceType\": \"Patient\"...\r\n    \r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://vulcano.ihcecol.gov.co/fhir/Patient"
+					},
+					"response": []
+				},
+				{
+					"name": "2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"resourceType\": \"Patient\",\r\n    \"gender\": \"female\",\r\n    \"birthDate\": \"1965-09-01\",\r\n    \"name\": {\r\n        \"text\": \"Ana Lopez\",\r\n        \"family\": \"Lopez\",\r\n        \"given\": [ \"Ana\" , \"Sofia\"]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://vulcano.ihcecol.gov.co/fhir/Patient"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consultar",
+			"item": [
+				{
+					"name": "Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://vulcano.ihcecol.gov.co/fhir/Patient"
+					},
+					"response": []
+				},
+				{
+					"name": "Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://vulcano.ihcecol.gov.co/fhir/Patient/3206"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Buscar",
+			"item": [
+				{
+					"name": "Buscar Pat - Nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vulcano.ihcecol.gov.co/fhir/Patient?name=Ana",
+							"protocol": "https",
+							"host": [
+								"vulcano",
+								"ihcecol",
+								"gov",
+								"co"
+							],
+							"path": [
+								"fhir",
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Ana"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Pat- FNacimiento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vulcano.ihcecol.gov.co/fhir/Patient?birthdate=gt2023-01-01",
+							"protocol": "https",
+							"host": [
+								"vulcano",
+								"ihcecol",
+								"gov",
+								"co"
+							],
+							"path": [
+								"fhir",
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "birthdate",
+									"value": "gt2023-01-01"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

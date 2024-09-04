@@ -6,7 +6,7 @@ Description: "An example profile of the Patient resource."
 * name ^definition = "Nombre con el que se lo conoce al paciente"
 * birthDate 1..1 MS
 
-Instance: PatientExample
+Instance: PatientExampleUniversal
 InstanceOf: PacienteUniversal
 Description: "An example of a patient with a license to krill."
 * name

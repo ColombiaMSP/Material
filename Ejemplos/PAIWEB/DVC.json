@@ -1,0 +1,197 @@
+{
+    "resourceType": "Bundle",
+    "identifier": {
+      "system": "urn:ietf:rfc:4122",
+      "value": "f50a5146-7d08-4f4d-b7a9-eb8a05d513a0"
+    },
+    "type": "document",
+    "timestamp": "2023-01-15T17:26:43.023+00:00",
+    "entry": [
+      {
+        "fullUrl": "urn:uuid:428e9bed-1f16-4595-91b9-80ae6ac12421",
+        "resource": {
+          "resourceType": "Composition",
+          "id": "428e9bed-1f16-4595-91b9-80ae6ac12421",
+          "status": "final",
+          "type": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "60591-5",
+                "display": "Patient Summary Document"
+              }
+            ]
+          },
+          "subject": {
+            "reference": "urn:uuid:ef333870-0a3a-4ab3-b0ff-6bc191a738c6"
+          },
+          "date": "2023-01-15T17:26:43+00:00",
+          "author": [
+            {
+              "reference": "urn:uuid:9d5f17f6-6537-4bbb-a883-a5937a79d10c"
+            }
+          ],
+          "title": "Patient Summary as of 01/15/2023",
+          "confidentiality": "N",
+          "custodian": {
+            "reference": "urn:uuid:9d5f17f6-6537-4bbb-a883-a5937a79d10c"
+          },
+          "section": [            
+            {
+              "title": "History of Immunizations",
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "11369-6",
+                    "display": "History of Immunization Narrative"
+                  }
+                ]
+              },
+              "text": {
+                "status": "generated",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">To be populated at future time</div>"
+              },
+              "entry": [
+                {
+                  "reference": "urn:uuid:6fef12e7-64ad-4792-b2ad-5d6b699588fc"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "fullUrl": "urn:uuid:ef333870-0a3a-4ab3-b0ff-6bc191a738c6",
+        "resource": {
+          "resourceType": "Patient",
+          "id": "ef333870-0a3a-4ab3-b0ff-6bc191a738c6",
+          "identifier": [
+            {
+              "system": "urn:oid.2.16.152",
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                    "code": "TAX"
+                  }
+                ]
+              },
+              "value": "CL/18922652-7"
+            },
+            {
+              "use": "official",
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                    "code": "PPN"
+                  }
+                ]
+              },
+              "system": "urn:oid.2.16.152",
+              "value": "CL/F12-1234123-2"
+            }
+          ],
+          "active": true,
+          "name": [
+            {
+              "use": "official",
+              "text": "Sergio Penafiel",
+              "family": "Penafiel",
+              "given": [
+                "Sergio"
+              ]
+            }
+          ],
+          "gender": "male",
+          "birthDate": "1994-10-13"
+        }
+      },
+      {
+        "fullUrl": "urn:uuid:6fef12e7-64ad-4792-b2ad-5d6b699588fc",
+        "resource": {
+          "resourceType": "Immunization",
+          "id": "6fef12e7-64ad-4792-b2ad-5d6b699588fc",
+          "meta": {
+            "profile": [
+              "http://lacpass.racsel.org/StructureDefinition/lac-immunization"
+            ]
+          },
+          "extension": [
+            {
+              "url": "http://lacpass.racsel.org/StructureDefinition/DDCCEventBrand",
+              "valueCoding": {
+                "system": "http://lacpass.racsel.org/CodeSystem/DDCC-Example-Test-CodeSystem",
+                "code": "XM4YL8"
+              }
+            },
+            {
+              "url": "http://lacpass.racsel.org/StructureDefinition/DDCCVaccineMarketAuthorization",
+              "valueCoding": {
+                "system": "http://lacpass.racsel.org/CodeSystem/DDCC-Example-Test-CodeSystem",
+                "code": "TEST"
+              }
+            },
+            {
+              "url": "http://lacpass.racsel.org/StructureDefinition/DDCCCountryOfEvent",
+              "valueCode": "CL"
+            }
+          ],
+          "location": {
+            "display": "Administration center"
+          },
+          "status": "completed",
+          "vaccineCode": {
+            "coding": [
+              {
+                "system": "http://id.who.int/icd11/mms",
+                "code": "XM9QW8",
+                "display": "COVID-19 vaccine, non-replicating viral vector"
+              }
+            ]
+          },
+          "lotNumber": "A1234",
+          "patient": {
+            "reference": "urn:uuid:ef333870-0a3a-4ab3-b0ff-6bc191a738c6"
+          },
+          "occurrenceDateTime": "2020-11-15",
+          "protocolApplied": [
+            {
+              "authority" : {
+                "reference" : "urn:uuid:9d5f17f6-6537-4bbb-a883-a5937a79d10c"
+              },
+              "targetDisease" : [
+                {
+                  "coding" : [
+                    {
+                      "system" : "http://id.who.int/icd11/mms",
+                      "code" : "RA01"
+                    }
+                  ]
+                }
+              ],
+              "doseNumberPositiveInt" : 1,
+              "seriesDosesPositiveInt" : 2
+            }
+          ]
+        }
+      },    
+   
+    
+      {
+        "fullUrl": "urn:uuid:9d5f17f6-6537-4bbb-a883-a5937a79d10c",
+        "resource": {
+          "resourceType": "Organization",
+          "id": "9d5f17f6-6537-4bbb-a883-a5937a79d10c",
+          "name": "Ministerio de Salud",
+          "address": [
+            {
+              "text": "Enrique Mac Iver 541, Santiago, Región Metropolitana",
+              "country": "CL"
+            }
+          ]
+        }
+      }
+    ]
+  }

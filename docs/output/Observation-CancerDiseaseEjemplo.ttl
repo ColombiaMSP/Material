@@ -1,0 +1,37 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://cocapacitacion.org/Observation/CancerDiseaseEjemplo> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CancerDiseaseEjemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://cocapacitacion.org/StructureDefinition/mcode-cancer-disease-status"^^xsd:anyURI ;
+       fhir:link <http://cocapacitacion.org/StructureDefinition/mcode-cancer-disease-status>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation CancerDiseaseEjemplo</b></p><a name=\"CancerDiseaseEjemplo\"> </a><a name=\"hcCancerDiseaseEjemplo\"> </a><a name=\"CancerDiseaseEjemplo-en-US\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 88040-1}\">Response to cancer treatment</span></p><p><b>subject</b>: <a href=\"Patient-PatientExampleUniversal.html\">Paciente Universal</a></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:88040-1 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "88040-1" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://cocapacitacion.org/Patient/PatientExampleUniversal> ;
+     fhir:reference [ fhir:v "Patient/PatientExampleUniversal" ] ;
+     fhir:display [ fhir:v "Paciente Universal" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

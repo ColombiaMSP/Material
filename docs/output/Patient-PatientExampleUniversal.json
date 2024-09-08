@@ -1,0 +1,16 @@
+{
+  "resourceType" : "Patient",
+  "id" : "PatientExampleUniversal",
+  "meta" : {
+    "profile" : ["http://cocapacitacion.org/StructureDefinition/PacienteUniversal"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient PatientExampleUniversal</b></p><a name=\"PatientExampleUniversal\"> </a><a name=\"hcPatientExampleUniversal\"> </a><a name=\"PatientExampleUniversal-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">James Pond  (no stated gender), DoB: 2010-01-01</p><hr/></div>"
+  },
+  "name" : [{
+    "family" : "Pond",
+    "given" : ["James"]
+  }],
+  "birthDate" : "2010-01-01"
+}

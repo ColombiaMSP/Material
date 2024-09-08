@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://cocapacitacion.org/ValueSet/mcode-condition-status-trend-vs> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "mcode-condition-status-trend-vs"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mcode-condition-status-trend-vs</b></p><a name=\"mcode-condition-status-trend-vs\"> </a><a name=\"hcmcode-condition-status-trend-vs\"> </a><a name=\"mcode-condition-status-trend-vs-en-US\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/260415000\">260415000</a></td><td>Not detected (qualifier)</td></tr><tr><td><a href=\"http://snomed.info/id/268910001\">268910001</a></td><td>Patient condition improved (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/359746009\">359746009</a></td><td>Patient's condition stable (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/271299001\">271299001</a></td><td>Patient's condition worsened (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/709137006\">709137006</a></td><td>Patient condition undetermined (finding)</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://cocapacitacion.org/ValueSet/mcode-condition-status-trend-vs"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "ConditionStatusTrendVS"] ; # 
+  fhir:title [ fhir:v "Condition Status Trend Value Set"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-09-04T16:46:58-03:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "CO CAPACITACION"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "CO CAPACITACION" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://cocapacitacion.org/ejemplo-publicacion" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "How patient's given disease, condition, or ability is trending."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "260415000" ] ;
+         fhir:display [ fhir:v "Not detected (qualifier)" ]
+       ] [
+         fhir:code [ fhir:v "268910001" ] ;
+         fhir:display [ fhir:v "Patient condition improved (finding)" ]
+       ] [
+         fhir:code [ fhir:v "359746009" ] ;
+         fhir:display [ fhir:v "Patient's condition stable (finding)" ]
+       ] [
+         fhir:code [ fhir:v "271299001" ] ;
+         fhir:display [ fhir:v "Patient's condition worsened (finding)" ]
+       ] [
+         fhir:code [ fhir:v "709137006" ] ;
+         fhir:display [ fhir:v "Patient condition undetermined (finding)" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

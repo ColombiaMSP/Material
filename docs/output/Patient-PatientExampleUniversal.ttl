@@ -1,0 +1,28 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://cocapacitacion.org/Patient/PatientExampleUniversal> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PatientExampleUniversal"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://cocapacitacion.org/StructureDefinition/PacienteUniversal"^^xsd:anyURI ;
+       fhir:link <http://cocapacitacion.org/StructureDefinition/PacienteUniversal>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient PatientExampleUniversal</b></p><a name=\"PatientExampleUniversal\"> </a><a name=\"hcPatientExampleUniversal\"> </a><a name=\"PatientExampleUniversal-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">James Pond  (no stated gender), DoB: 2010-01-01</p><hr/></div>"
+  ] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Pond" ] ;
+     fhir:given ( [ fhir:v "James" ] )
+  ] ) ; # 
+  fhir:birthDate [ fhir:v "2010-01-01"^^xsd:date] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="CancerDiseaseEjemplo"/>
+  <meta>
+    <profile value="http://cocapacitacion.org/StructureDefinition/mcode-cancer-disease-status"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation CancerDiseaseEjemplo</b></p><a name="CancerDiseaseEjemplo"> </a><a name="hcCancerDiseaseEjemplo"> </a><a name="CancerDiseaseEjemplo-en-US"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 88040-1}">Response to cancer treatment</span></p><p><b>subject</b>: <a href="Patient-PatientExampleUniversal.html">Paciente Universal</a></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="88040-1"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/PatientExampleUniversal"/>
+    <display value="Paciente Universal"/>
+  </subject>
+</Observation>

@@ -1,0 +1,22 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://cocapacitacion.org/ValueSet/mcode-cancer-disease-status-evidence-type-vs",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CancerDiseaseStatusEvidenceTypeVS",
+      "title" : "Cancer Disease Status Evidence Type Value Set",
+      "description" : "The type of evidence backing up the clinical determination of cancer progression.",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://cocapacitacion.org/ValueSet/mcode-condition-status-trend-vs",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ConditionStatusTrendVS",
+      "title" : "Condition Status Trend Value Set",
+      "description" : "How patient's given disease, condition, or ability is trending.",
+      "systems" : ["http://snomed.info/sct"]
+    }
+  ]
+}

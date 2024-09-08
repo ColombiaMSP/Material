@@ -1,0 +1,58 @@
+[
+  {
+    "id" : "co.capacitacion",
+    "type" : "ImplementationGuide",
+    "url" : "http://cocapacitacion.org/ImplementationGuide/co.capacitacion",
+    "version" : "0.1.0",
+    "name" : "COCapacitacion"
+  },
+  {
+    "id" : "Consulta",
+    "type" : "StructureDefinition",
+    "url" : "http://cocapacitacion.org/StructureDefinition/Consulta",
+    "version" : "0.1.0",
+    "name" : "Consulta"
+  },
+  {
+    "id" : "PacienteUniversal",
+    "type" : "StructureDefinition",
+    "url" : "http://cocapacitacion.org/StructureDefinition/PacienteUniversal",
+    "version" : "0.1.0",
+    "name" : "PacienteUniversal"
+  },
+  {
+    "id" : "info-extra",
+    "type" : "StructureDefinition",
+    "url" : "http://cocapacitacion.org/StructureDefinition/info-extra",
+    "version" : "0.1.0",
+    "name" : "Info"
+  },
+  {
+    "id" : "mcode-cancer-disease-status",
+    "type" : "StructureDefinition",
+    "url" : "http://cocapacitacion.org/StructureDefinition/mcode-cancer-disease-status",
+    "version" : "0.1.0",
+    "name" : "CancerDiseaseStatus"
+  },
+  {
+    "id" : "mcode-evidence-type",
+    "type" : "StructureDefinition",
+    "url" : "http://cocapacitacion.org/StructureDefinition/mcode-evidence-type",
+    "version" : "0.1.0",
+    "name" : "EvidenceType"
+  },
+  {
+    "id" : "mcode-cancer-disease-status-evidence-type-vs",
+    "type" : "ValueSet",
+    "url" : "http://cocapacitacion.org/ValueSet/mcode-cancer-disease-status-evidence-type-vs",
+    "version" : "0.1.0",
+    "name" : "CancerDiseaseStatusEvidenceTypeVS"
+  },
+  {
+    "id" : "mcode-condition-status-trend-vs",
+    "type" : "ValueSet",
+    "url" : "http://cocapacitacion.org/ValueSet/mcode-condition-status-trend-vs",
+    "version" : "0.1.0",
+    "name" : "ConditionStatusTrendVS"
+  }
+]

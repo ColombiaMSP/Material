@@ -1,0 +1,3 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Uses,Used,Sources
+http://cocapacitacion.org/ValueSet/mcode-cancer-disease-status-evidence-type-vs,0.1.0,draft,,CancerDiseaseStatusEvidenceTypeVS,Cancer Disease Status Evidence Type Value Set,"The type of evidence backing up the clinical determination of cancer progression.",,"SCT"
+http://cocapacitacion.org/ValueSet/mcode-condition-status-trend-vs,0.1.0,draft,,ConditionStatusTrendVS,Condition Status Trend Value Set,"How patient's given disease, condition, or ability is trending.",,"SCT"

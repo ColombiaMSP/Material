@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mcode-cancer-disease-status-evidence-type-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mcode-cancer-disease-status-evidence-type-vs</b></p><a name=\"mcode-cancer-disease-status-evidence-type-vs\"> </a><a name=\"hcmcode-cancer-disease-status-evidence-type-vs\"> </a><a name=\"mcode-cancer-disease-status-evidence-type-vs-en-US\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/363679005\">363679005</a></td><td>Imaging (procedure)</td></tr><tr><td><a href=\"http://snomed.info/id/252416005\">252416005</a></td><td>Histopathology test (procedure)</td></tr><tr><td><a href=\"http://snomed.info/id/711015009\">711015009</a></td><td>Assessment of symptom control (procedure)</td></tr><tr><td><a href=\"http://snomed.info/id/5880005\">5880005</a></td><td>Physical examination procedure (procedure)</td></tr><tr><td><a href=\"http://snomed.info/id/386344002\">386344002</a></td><td>Laboratory data interpretation (procedure)</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://cocapacitacion.org/ValueSet/mcode-cancer-disease-status-evidence-type-vs",
+  "version" : "0.1.0",
+  "name" : "CancerDiseaseStatusEvidenceTypeVS",
+  "title" : "Cancer Disease Status Evidence Type Value Set",
+  "status" : "draft",
+  "date" : "2024-09-04T16:46:58-03:00",
+  "publisher" : "CO CAPACITACION",
+  "contact" : [{
+    "name" : "CO CAPACITACION",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://cocapacitacion.org/ejemplo-publicacion"
+    }]
+  }],
+  "description" : "The type of evidence backing up the clinical determination of cancer progression.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "363679005",
+        "display" : "Imaging (procedure)"
+      },
+      {
+        "code" : "252416005",
+        "display" : "Histopathology test (procedure)"
+      },
+      {
+        "code" : "711015009",
+        "display" : "Assessment of symptom control (procedure)"
+      },
+      {
+        "code" : "5880005",
+        "display" : "Physical examination procedure (procedure)"
+      },
+      {
+        "code" : "386344002",
+        "display" : "Laboratory data interpretation (procedure)"
+      }]
+    }]
+  }
+}

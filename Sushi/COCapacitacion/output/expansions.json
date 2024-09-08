@@ -1,0 +1,150 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "ef876eb2-59e8-4012-92b2-059176d83166",
+  "meta" : {
+    "lastUpdated" : "2024-09-04T16:46:58.533-03:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://cocapacitacion.org/ValueSet/mcode-cancer-disease-status-evidence-type-vs",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 01-feb. 2024</p><p>This value set contains 5 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://snomed.info/sct-363679005\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/363679005\">363679005</a></td><td>http://snomed.info/sct</td><td>Imaging (procedure)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://snomed.info/sct-252416005\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/252416005\">252416005</a></td><td>http://snomed.info/sct</td><td>Histopathology test</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://snomed.info/sct-711015009\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/711015009\">711015009</a></td><td>http://snomed.info/sct</td><td>Assessment of symptom control</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://snomed.info/sct-5880005\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/5880005\">5880005</a></td><td>http://snomed.info/sct</td><td>Physical examination procedure (procedure)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://snomed.info/sct-386344002\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/386344002\">386344002</a></td><td>http://snomed.info/sct</td><td>Laboratory data interpretation (procedure)</td></tr></table></div>"
+      },
+      "url" : "http://cocapacitacion.org/ValueSet/mcode-cancer-disease-status-evidence-type-vs",
+      "version" : "0.1.0",
+      "name" : "CancerDiseaseStatusEvidenceTypeVS",
+      "title" : "Cancer Disease Status Evidence Type Value Set",
+      "status" : "draft",
+      "date" : "2024-09-04T16:46:58-03:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:7a048928-2309-4181-aa23-145575f16fb8",
+        "timestamp" : "2024-09-04T16:47:35-03:00",
+        "total" : 5,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240201"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240201"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "363679005",
+          "display" : "Imaging (procedure)"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "252416005",
+          "display" : "Histopathology test"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "711015009",
+          "display" : "Assessment of symptom control"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "5880005",
+          "display" : "Physical examination procedure (procedure)"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "386344002",
+          "display" : "Laboratory data interpretation (procedure)"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://cocapacitacion.org/ValueSet/mcode-condition-status-trend-vs",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 01-feb. 2024</p><p>This value set contains 5 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://snomed.info/sct-260415000\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/260415000\">260415000</a></td><td>http://snomed.info/sct</td><td>Not detected</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://snomed.info/sct-268910001\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/268910001\">268910001</a></td><td>http://snomed.info/sct</td><td>Patient's condition improved</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://snomed.info/sct-359746009\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/359746009\">359746009</a></td><td>http://snomed.info/sct</td><td>Patient status stable</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://snomed.info/sct-271299001\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/271299001\">271299001</a></td><td>http://snomed.info/sct</td><td>Patient's condition worsened</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://snomed.info/sct-709137006\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/709137006\">709137006</a></td><td>http://snomed.info/sct</td><td>Patient condition undetermined</td></tr></table></div>"
+      },
+      "url" : "http://cocapacitacion.org/ValueSet/mcode-condition-status-trend-vs",
+      "version" : "0.1.0",
+      "name" : "ConditionStatusTrendVS",
+      "title" : "Condition Status Trend Value Set",
+      "status" : "draft",
+      "date" : "2024-09-04T16:46:58-03:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:819cdc48-aceb-4761-80e1-6de157698c18",
+        "timestamp" : "2024-09-04T16:47:36-03:00",
+        "total" : 5,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240201"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240201"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "260415000",
+          "display" : "Not detected"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "268910001",
+          "display" : "Patient's condition improved"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "359746009",
+          "display" : "Patient status stable"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "271299001",
+          "display" : "Patient's condition worsened"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "709137006",
+          "display" : "Patient condition undetermined"
+        }]
+      }
+    }
+  }]
+}

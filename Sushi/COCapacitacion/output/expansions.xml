@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="ef876eb2-59e8-4012-92b2-059176d83166"/>
+  <meta>
+    <lastUpdated value="2024-09-04T16:46:58.533-03:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://cocapacitacion.org/ValueSet/mcode-cancer-disease-status-evidence-type-vs"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT International edition 01-feb. 2024</p>
+            <p>This value set contains 5 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-363679005"> </a>  
+                  <a href="http://snomed.info/id/363679005">363679005</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Imaging (procedure)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-252416005"> </a>  
+                  <a href="http://snomed.info/id/252416005">252416005</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Histopathology test</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-711015009"> </a>  
+                  <a href="http://snomed.info/id/711015009">711015009</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Assessment of symptom control</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-5880005"> </a>  
+                  <a href="http://snomed.info/id/5880005">5880005</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Physical examination procedure (procedure)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-386344002"> </a>  
+                  <a href="http://snomed.info/id/386344002">386344002</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Laboratory data interpretation (procedure)</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://cocapacitacion.org/ValueSet/mcode-cancer-disease-status-evidence-type-vs"/>
+        <version value="0.1.0"/>
+        <name value="CancerDiseaseStatusEvidenceTypeVS"/>
+        <title value="Cancer Disease Status Evidence Type Value Set"/>
+        <status value="draft"/>
+        <date value="2024-09-04T16:46:58-03:00"/>
+        <expansion>
+          <identifier value="urn:uuid:7a048928-2309-4181-aa23-145575f16fb8"/>
+          <timestamp value="2024-09-04T16:47:35-03:00"/>
+          <total value="5"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240201"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240201"/>
+          </parameter>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="363679005"/>
+            <display value="Imaging (procedure)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="252416005"/>
+            <display value="Histopathology test"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="711015009"/>
+            <display value="Assessment of symptom control"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="5880005"/>
+            <display value="Physical examination procedure (procedure)"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="386344002"/>
+            <display value="Laboratory data interpretation (procedure)"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://cocapacitacion.org/ValueSet/mcode-condition-status-trend-vs"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT International edition 01-feb. 2024</p>
+            <p>This value set contains 5 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-260415000"> </a>  
+                  <a href="http://snomed.info/id/260415000">260415000</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Not detected</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-268910001"> </a>  
+                  <a href="http://snomed.info/id/268910001">268910001</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient's condition improved</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-359746009"> </a>  
+                  <a href="http://snomed.info/id/359746009">359746009</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient status stable</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-271299001"> </a>  
+                  <a href="http://snomed.info/id/271299001">271299001</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient's condition worsened</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-709137006"> </a>  
+                  <a href="http://snomed.info/id/709137006">709137006</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Patient condition undetermined</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://cocapacitacion.org/ValueSet/mcode-condition-status-trend-vs"/>
+        <version value="0.1.0"/>
+        <name value="ConditionStatusTrendVS"/>
+        <title value="Condition Status Trend Value Set"/>
+        <status value="draft"/>
+        <date value="2024-09-04T16:46:58-03:00"/>
+        <expansion>
+          <identifier value="urn:uuid:819cdc48-aceb-4761-80e1-6de157698c18"/>
+          <timestamp value="2024-09-04T16:47:36-03:00"/>
+          <total value="5"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240201"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20240201"/>
+          </parameter>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="260415000"/>
+            <display value="Not detected"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="268910001"/>
+            <display value="Patient's condition improved"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="359746009"/>
+            <display value="Patient status stable"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="271299001"/>
+            <display value="Patient's condition worsened"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="709137006"/>
+            <display value="Patient condition undetermined"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="PatientExampleUniversal"/>
+  <meta>
+    <profile value="http://cocapacitacion.org/StructureDefinition/PacienteUniversal"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient PatientExampleUniversal</b></p><a name="PatientExampleUniversal"> </a><a name="hcPatientExampleUniversal"> </a><a name="PatientExampleUniversal-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">James Pond  (no stated gender), DoB: 2010-01-01</p><hr/></div>
+  </text>
+  <name>
+    <family value="Pond"/>
+    <given value="James"/>
+  </name>
+  <birthDate value="2010-01-01"/>
+</Patient>

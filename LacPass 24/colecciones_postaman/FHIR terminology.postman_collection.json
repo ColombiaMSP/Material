@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "48b359c0-acb0-4145-ad67-3fe9d6fe6c9e",
+		"name": "FHIR terminology",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13327082",
+		"_collection_link": "https://www.postman.com/flight-geoscientist-85716189/public/collection/rrjdh3k/fhir-terminology?action=share&source=collection_link&creator=13327082"
+	},
+	"item": [
+		{
+			"name": "Verify uploaded terminology data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{terminology-server}}/CodeSystem",
+					"host": [
+						"{{terminology-server}}"
+					],
+					"path": [
+						"CodeSystem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ITI-97: ValueSet/$expand",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{terminology-server}}/ValueSet/$expand?url={{alergias-ValueSet-local}}&filter=amox",
+					"host": [
+						"{{terminology-server}}"
+					],
+					"path": [
+						"ValueSet",
+						"$expand"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "{{alergias-ValueSet-local}}"
+						},
+						{
+							"key": "filter",
+							"value": "amox"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ITI-98: ConceptMap/$lookup",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{terminology-server}}/CodeSystem/$lookup?system={{local-CodeSystem-vacunas}}&code=L30",
+					"host": [
+						"{{terminology-server}}"
+					],
+					"path": [
+						"CodeSystem",
+						"$lookup"
+					],
+					"query": [
+						{
+							"key": "system",
+							"value": "{{local-CodeSystem-vacunas}}"
+						},
+						{
+							"key": "code",
+							"value": "L30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ITI-101: ConceptMap/$translate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{terminology-server}}/ConceptMap/$translate?code=L30&system={{local-CodeSystem-vacunas}}&targetsystem={{SNOMED-CodeSystem}}",
+					"host": [
+						"{{terminology-server}}"
+					],
+					"path": [
+						"ConceptMap",
+						"$translate"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "L30"
+						},
+						{
+							"key": "system",
+							"value": "{{local-CodeSystem-vacunas}}"
+						},
+						{
+							"key": "targetsystem",
+							"value": "{{SNOMED-CodeSystem}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "terminology-server",
+			"value": "http://lacpass.create.cl:8180/fhir",
+			"type": "string"
+		},
+		{
+			"key": "antecedentes-personales-ValueSet",
+			"value": "http://racsel.org/fhir/ValueSet/antecedentes-personales-vs",
+			"type": "string"
+		},
+		{
+			"key": "antecedentes-personales-ValueSet-RACSEL",
+			"value": "http://racsel.org/fhir/ValueSet/antecedentes-personales-racsel-vs",
+			"type": "string"
+		},
+		{
+			"key": "antecedentes-personales-ValueSet-local",
+			"value": "http://racsel.org/fhir/ValueSet/antecedentes-personales-racsel-vs",
+			"type": "string"
+		},
+		{
+			"key": "diagnosticos-ValueSet",
+			"value": "http://racsel.org/fhir/ValueSet/diagnosticos-vs",
+			"type": "string"
+		},
+		{
+			"key": "diagnositicos-ValueSet-RACSEL",
+			"value": "http://racsel.org/fhir/ValueSet/diagnosticos-racsel-vs",
+			"type": "string"
+		},
+		{
+			"key": "diagnosticos-ValueSet-local",
+			"value": "http://racsel.org/fhir/ValueSet/diagnosticos-local-vs",
+			"type": "string"
+		},
+		{
+			"key": "vacunas-ValueSet",
+			"value": "http://racsel.org/fhir/ValueSet/vacunas-vs",
+			"type": "string"
+		},
+		{
+			"key": "vacunas-ValueSet-RACSEL",
+			"value": "http://racsel.org/fhir/ValueSet/vacunas-racsel-vs",
+			"type": "string"
+		},
+		{
+			"key": "vacunas-ValueSet-local",
+			"value": "http://racsel.org/fhir/ValueSet/vacunas-local-vs",
+			"type": "string"
+		},
+		{
+			"key": "alergias-ValueSet",
+			"value": "http://racsel.org/fhir/ValueSet/alergias-vs",
+			"type": "string"
+		},
+		{
+			"key": "alergias-ValueSet-RACSEL",
+			"value": "http://racsel.org/fhir/ValueSet/alergias-racsel-vs",
+			"type": "string"
+		},
+		{
+			"key": "alergias-ValueSet-local",
+			"value": "http://racsel.org/fhir/ValueSet/alergias-local-vs",
+			"type": "string"
+		},
+		{
+			"key": "medicacion-ValueSet",
+			"value": "http://racsel.org/fhir/ValueSet/medicacion-vs",
+			"type": "string"
+		},
+		{
+			"key": "medicacion-ValueSet-RACSEL",
+			"value": "http://racsel.org/fhir/ValueSet/medicacion-racsel-vs",
+			"type": "string"
+		},
+		{
+			"key": "medicacion-ValueSet-local",
+			"value": "http://racsel.org/fhir/ValueSet/medicacion-local-vs",
+			"type": "string"
+		},
+		{
+			"key": "procedimientos-ValueSet",
+			"value": "http://racsel.org/fhir/ValueSet/procedimientos-vs",
+			"type": "string"
+		},
+		{
+			"key": "procedimientos-ValueSet-RACSEL",
+			"value": "http://racsel.org/fhir/ValueSet/procedimientos-racsel-vs",
+			"type": "string"
+		},
+		{
+			"key": "procedimientos-ValueSet-local",
+			"value": "http://racsel.org/fhir/ValueSet/procedimientos-local-vs",
+			"type": "string"
+		},
+		{
+			"key": "RACSEL-ValueSet",
+			"value": "http://racsel.org/fhir/ValueSet/racsel-vs",
+			"type": "string"
+		},
+		{
+			"key": "local-ValueSet",
+			"value": "http://racsel.org/fhir/ValueSet/local-vs",
+			"type": "string"
+		},
+		{
+			"key": "SNOMED-ValueSet",
+			"value": "http://racsel.org/fhir/ValueSet/snomed-vs",
+			"type": "string"
+		},
+		{
+			"key": "SNOMED-CodeSystem",
+			"value": "http://snomed.info/sct",
+			"type": "string"
+		},
+		{
+			"key": "RACSEL-CodeSystem",
+			"value": "http://racsel.org/connectathon",
+			"type": "string"
+		},
+		{
+			"key": "ICD10-CodeSystem",
+			"value": "http://hl7.org/fhir/sid/icd-10",
+			"type": "string"
+		},
+		{
+			"key": "ICD11-CodeSystem",
+			"value": "http://id.who.int/icd/release/11/mms",
+			"type": "string"
+		},
+		{
+			"key": "local-CodeSystem",
+			"value": "http://node-x.org/terminology",
+			"type": "string"
+		},
+		{
+			"key": "local-CodeSystem-procedimientos",
+			"value": "http://node-x.org/terminology/procedimientos",
+			"type": "string"
+		},
+		{
+			"key": "local-CodeSystem-medicacion",
+			"value": "http://node-x.org/terminology/medicacion",
+			"type": "string"
+		},
+		{
+			"key": "local-CodeSystem-vacunas",
+			"value": "http://node-x.org/terminology/vacunas",
+			"type": "string"
+		},
+		{
+			"key": "local-CodeSystem-alergias",
+			"value": "http://node-x.org/terminology/alergias",
+			"type": "string"
+		},
+		{
+			"key": "local-CodeSystem-diagnosticos",
+			"value": "http://node-x.org/terminology/diagnosticos",
+			"type": "string"
+		},
+		{
+			"key": "local-CodeSystem-antecedentes-personales",
+			"value": "http://node-x.org/terminology/antecedentes",
+			"type": "string"
+		}
+	]
+}

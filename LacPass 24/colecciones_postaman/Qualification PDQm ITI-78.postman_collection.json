@@ -1,0 +1,2827 @@
+{
+	"info": {
+		"_postman_id": "9201ec8e-b387-4906-8224-015182ae4139",
+		"name": "Qualification PDQm ITI-78",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13327082",
+		"_collection_link": "https://www.postman.com/flight-geoscientist-85716189/public/collection/mvd98yh/qualification-pdqm-iti-78?action=share&source=collection_link&creator=13327082"
+	},
+	"item": [
+		{
+			"name": "Nominal cases",
+			"item": [
+				{
+					"name": "Query Patient with _id xml",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+xml"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?_id={{id}}",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "_id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with _id json",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?_id={{id}}",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "_id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with  active=false and given",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?active=false&given={{given female}}",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": "false"
+								},
+								{
+									"key": "given",
+									"value": "{{given female}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with gender=female, given,active=true and adresse-country",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"//https://ehealthsuisse.ihe-europe.net/PatientManager/patient.seam?id=7239"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?gender=female&given={{given female}}&active=true&address-country={{address-country}}",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "gender",
+									"value": "female"
+								},
+								{
+									"key": "given",
+									"value": "{{given female}}"
+								},
+								{
+									"key": "active",
+									"value": "true"
+								},
+								{
+									"key": "address-country",
+									"value": "{{address-country}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with gender=male, given,active=true and identifier",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?gender=male&identifier={{identifier2}}&family=Ovie&given=Bergan",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "gender",
+									"value": "male"
+								},
+								{
+									"key": "identifier",
+									"value": "{{identifier2}}"
+								},
+								{
+									"key": "family",
+									"value": "Ovie"
+								},
+								{
+									"key": "given",
+									"value": "Bergan"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with family and given",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									"\r",
+									"\r",
+									"\r",
+									"//var collectionVariableContent = pm.collectionVariables.get('fff');\r",
+									"\r",
+									"//var responseBody = pm.response.json();\r",
+									"\r",
+									"var variableValue = pm.collectionVariables.get('family2');\r",
+									"var variableValue2 = pm.collectionVariables.get('given female');\r",
+									"\r",
+									"// Get the response body as plain text\r",
+									"var responseBody = pm.response.text();\r",
+									"\r",
+									"// Check if the variable value is present in the response body\r",
+									"pm.test(\"Parameter family is present in the response body\", function() {\r",
+									"    pm.expect(responseBody).to.include(variableValue);\r",
+									"});\r",
+									"\r",
+									"// Check if the variable value is present in the response body\r",
+									"pm.test(\"Parameter given is present in the response body\", function() {\r",
+									"    pm.expect(responseBody).to.include(variableValue2);\r",
+									"});\r",
+									"console.log(variableValue);\r",
+									"console.log(variableValue2);\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?family=Peñafiel&given=Sergio",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "family",
+									"value": "Peñafiel"
+								},
+								{
+									"key": "given",
+									"value": "Sergio"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with identifier",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "https://gazelle.racsel.org/pdqm-fhir-simulator/IHE/fhir//Patient?identifier=BRZ9007",
+							"protocol": "https",
+							"host": [
+								"gazelle",
+								"racsel",
+								"org"
+							],
+							"path": [
+								"pdqm-fhir-simulator",
+								"IHE",
+								"fhir",
+								"",
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": "BRZ9007"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with identifier format xml",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+xml"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?identifier={{identifier2}}",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": "{{identifier2}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Query Patient with identifier format xml",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/fhir+xml"
+									},
+									{
+										"key": "traceparent",
+										"value": "00-0af7651916cd43dd8448eb211c80319c-b7ad6b7169203331-00"
+									}
+								],
+								"url": {
+									"raw": "https://gazelle.racsel.org/pdqm-fhir-simulator/IHE/fhir/Patient?identifier=AB668001",
+									"protocol": "https",
+									"host": [
+										"gazelle",
+										"racsel",
+										"org"
+									],
+									"path": [
+										"pdqm-fhir-simulator",
+										"IHE",
+										"fhir",
+										"Patient"
+									],
+									"query": [
+										{
+											"key": "identifier",
+											"value": "AB668001"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 01 Aug 2024 08:18:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=63072000; includeSubdomains;"
+								},
+								{
+									"key": "http-validation-url",
+									"value": "https://ehealthsuisse.ihe-europe.net/evs/rest/validations/1.3.6.1.4.1.12559.11.25.4.843325"
+								},
+								{
+									"key": "traceparent",
+									"value": "00-0af7651916cd43dd8448eb211c80319c-555dea211e9249e1-00"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 7.0.2 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "NXfCibvjKJkwSZBw"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Thu, 01 Aug 2024 08:18:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/xml",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "<Bundle xmlns=\"http://hl7.org/fhir\">\n    <id value=\"0f5a53e9-ad37-4f1f-b346-b3aa236c0b01\"/>\n    <meta>\n        <lastUpdated value=\"2024-08-01T10:18:13.391+02:00\"/>\n    </meta>\n    <type value=\"searchset\"/>\n    <total value=\"1\"/>\n    <link>\n        <relation value=\"self\"/>\n        <url value=\"http://127.0.0.1:8649/pdqm-fhir-simulator/IHE/fhir/Patient?identifier=AB668001\"/>\n    </link>\n    <entry>\n        <fullUrl value=\"http://127.0.0.1:8649/pdqm-fhir-simulator/IHE/fhir/Patient/11e8113a-32a5-4f61-9a37-9429200c0442\"/>\n        <resource>\n            <Patient xmlns=\"http://hl7.org/fhir\">\n                <id value=\"11e8113a-32a5-4f61-9a37-9429200c0442\"/>\n                <text>\n                    <status value=\"generated\"/>\n                    <div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <div class=\"hapiHeaderText\">Rio \n                            \n                            <b>MATINEZ </b>\n                        </div>\n                        <table class=\"hapiPropertyTable\">\n                            <tbody>\n                                <tr>\n                                    <td>Identifier</td>\n                                    <td>IHEBLUE-3167</td>\n                                </tr>\n                                <tr>\n                                    <td>Address</td>\n                                    <td>\n                                        <span>Via Geremia Bonomelli </span>\n                                        <br/>\n                                        <span>Cremona </span>\n                                        <span>COL </span>\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td>Date of birth</td>\n                                    <td>\n                                        <span>28 July 2002</span>\n                                    </td>\n                                </tr>\n                            </tbody>\n                        </table>\n                    </div>\n                </text>\n                <identifier>\n                    <system value=\"urn:oid:1.3.6.1.4.1.21367.13.20.3007\"/>\n                    <value value=\"IHEBLUE-3167\"/>\n                </identifier>\n                <identifier>\n                    <system value=\"urn:oid:1.3.6.1.4.1.21367.3008.1.7\"/>\n                    <value value=\"IHEFACILITY-3167\"/>\n                </identifier>\n                <identifier>\n                    <system value=\"urn:oid:1.3.6.1.4.1.21367.13.20.2007\"/>\n                    <value value=\"IHEGREEN-3167\"/>\n                </identifier>\n                <identifier>\n                    <system value=\"urn:oid:1.3.6.1.4.1.21367.13.20.1007\"/>\n                    <value value=\"IHERED-3167\"/>\n                </identifier>\n                <identifier>\n                    <system value=\"urn:oid:1.3.6.1.4.1.12559.11.1.2.2.7\"/>\n                    <value value=\"AB668001\"/>\n                </identifier>\n                <identifier>\n                    <system value=\"urn:oid:1.3.6.1.4.1.21367.13.20.4007\"/>\n                    <value value=\"EUR01P0011\"/>\n                </identifier>\n                <active value=\"true\"/>\n                <name>\n                    <family value=\"Matinez\"/>\n                    <given value=\"Rio\"/>\n                </name>\n                <gender value=\"male\"/>\n                <birthDate value=\"2002-07-28\"/>\n                <address>\n                    <use value=\"home\"/>\n                    <line value=\"Via Geremia Bonomelli\"/>\n                    <city value=\"Cremona\"/>\n                    <postalCode value=\"26100\"/>\n                    <country value=\"COL\"/>\n                </address>\n            </Patient>\n        </resource>\n    </entry>\n</Bundle>"
+						}
+					]
+				},
+				{
+					"name": "Query Patient with multiple identifier domains",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?identifier=urn:oid:2.16.756.5.30.1.127.3.10.3%7C,urn:oid:1.3.6.1.4.1.12559.11.20.1%7C,urn:oid:1.3.6.1.4.1.12559.11.25.1.19%7C&given=Alessandra&family=Ehrxyzmedical",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": "urn:oid:2.16.756.5.30.1.127.3.10.3%7C,urn:oid:1.3.6.1.4.1.12559.11.20.1%7C,urn:oid:1.3.6.1.4.1.12559.11.25.1.19%7C"
+								},
+								{
+									"key": "given",
+									"value": "Alessandra"
+								},
+								{
+									"key": "family",
+									"value": "Ehrxyzmedical"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with birthdate and gender female",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?birthdate=1950-03-24&gender=female",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "birthdate",
+									"value": "1950-03-24"
+								},
+								{
+									"key": "gender",
+									"value": "female"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with address",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?address=Rappentöriweg&given=Alessandra",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": "Rappentöriweg"
+								},
+								{
+									"key": "given",
+									"value": "Alessandra"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with address-city, address country and family",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"//https://ehealthsuisse.ihe-europe.net/PatientManager/patient.seam?id=6952"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?address-city=Heusenstamm&address-country=DEU&family=Schmidt",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "address-city",
+									"value": "Heusenstamm"
+								},
+								{
+									"key": "address-country",
+									"value": "DEU"
+								},
+								{
+									"key": "family",
+									"value": "Schmidt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with address-country and given",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json",
+								"type": "text"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?address-country={{address-country}}&given={{given male}}",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "address-country",
+									"value": "{{address-country}}"
+								},
+								{
+									"key": "given",
+									"value": "{{given male}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with address-postalcode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?address-postalcode={{address-postalcode}}",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "address-postalcode",
+									"value": "{{address-postalcode}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with address-state",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?address-state=CA&family=Cerda",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "address-state",
+									"value": "CA"
+								},
+								{
+									"key": "family",
+									"value": "Cerda"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with family and identifier",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?identifier={{identifier2}}&family=Ovie",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": "{{identifier2}}"
+								},
+								{
+									"key": "family",
+									"value": "Ovie"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient _lastUpdated and active=false given=Adrian",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?_lastUpdated=ge2024-04-22&active=false&given=Adrian",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "_lastUpdated",
+									"value": "ge2024-04-22"
+								},
+								{
+									"key": "active",
+									"value": "false"
+								},
+								{
+									"key": "given",
+									"value": "Adrian"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Patient",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient/{{id}}",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with _id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "_id={{id}}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/Patient/_search",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with lastUpdated and active=true and given",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "_lastUpdated=ge2024-03-22&active=true&given=Adrian",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/Patient/_search",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with multiple identifier domains",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "identifier=urn:oid:2.16.756.5.30.1.127.3.10.3%7C,urn:oid:1.3.6.1.4.1.12559.11.20.1%7C,urn:oid:1.3.6.1.4.1.12559.11.25.1.19%7C&given=Alessandra&family=Ehrxyzmedical",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/Patient/_search",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with identifier",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "identifier",
+									"value": "{{identifier2}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Endpoint}}/Patient/_search",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with active=true, given and family",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "active=true&given={{given female}}&family={{family2}}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/Patient/_search",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with family and birthdate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "family={{family}}&birthdate=2002-03-29",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/Patient/_search",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with address",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "address={{address}}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/Patient/_search",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with birthdate, gender=male and active=true",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "birthdate=1956-05-27&gender=male&active=true",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/Patient/_search",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CapabilityStatement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/metadata",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"metadata"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Error cases",
+			"item": [
+				{
+					"name": "Query for a patient with family  and not valid birthdate format 400, 404",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 1000ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?name={{name}}&family={{family}}&birthdate=27-01-1995",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{{name}}"
+								},
+								{
+									"key": "family",
+									"value": "{{family}}"
+								},
+								{
+									"key": "birthdate",
+									"value": "27-01-1995"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with identifier not valid format  pdf 406",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 406\", function () {\r",
+									"    pm.response.to.have.status(406);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+pdf"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?identifier={{identifier}}",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": "{{identifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient more than 5 matches-412 Precondition Failed",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Error returned code 400 or 412\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([400,412]);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"   "
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?gender=female",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "gender",
+									"value": "female"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with active=XXX and given=male 400, 404",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"pm.test(\"Error returned code\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([400,404]);\r",
+									"});\r",
+									"    \r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?active=XXX&given={{given male}}&_id=8275",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": "XXX"
+								},
+								{
+									"key": "given",
+									"value": "{{given male}}"
+								},
+								{
+									"key": "_id",
+									"value": "8275"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with active=true  and given no TOKEN 401",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?active=false&given={{given female}}",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": "false"
+								},
+								{
+									"key": "given",
+									"value": "{{given female}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with 2 x birthdates and family 400",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?birthdate=1995-01-27&birthdate=1985-05-30&family={{family}}",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "birthdate",
+									"value": "1995-01-27"
+								},
+								{
+									"key": "birthdate",
+									"value": "1985-05-30"
+								},
+								{
+									"key": "family",
+									"value": "{{family}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient _lastUpdated not valide date and family 400,404",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Error returned code\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([400,404]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?_lastUpdated=ge28-05-1985&id=8275",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "_lastUpdated",
+									"value": "ge28-05-1985"
+								},
+								{
+									"key": "id",
+									"value": "8275"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with telecom parameter and name 400,404",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"pm.test(\"Error returned code\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([400,404]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient?telecom={{telecom}}",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "telecom",
+									"value": "{{telecom}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Patient with not valid id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Error returned code\", function () {\r",
+									"    pm.expect(pm.response.code).not.to.be.oneOf([400,404]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							}
+						],
+						"url": {
+							"raw": "{{Endpoint}}/Patient/id=bfizbizu",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient",
+								"id=bfizbizu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with not existing address 400,404",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"pm.test(\"Correct returned code\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([400,404]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "address=ndjahodih",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/Patient/_search",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with telecom parameter and family 400,404",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"pm.test(\"Error returned code\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([400,404]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "telecom={{telecom}}&family={{familly}}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/Patient/_search",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with birthdate, active=true, given female no valid token 401",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "rjzktbgck66",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "birthdate=1988-09-07&active=true&given={{given female}}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/Patient/_search",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Patient with 2 EPR-SPID identifier 400,404",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"pm.test(\"Error returned code\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([400,404]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "traceparent",
+								"value": "{{traceparent}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "identifier={{identifier}}&identifier={{identifier2}}\r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Endpoint}}/Patient/_search",
+							"host": [
+								"{{Endpoint}}"
+							],
+							"path": [
+								"Patient",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJnVmd6VWtRZEtwZHVMbmF4bThKQy1JYTh0VUdNV0J1TTJZT2R3akthcEdzIn0.eyJleHAiOjE3MDgzNDg0ODUsImlhdCI6MTcwODM0ODE4NSwiYXV0aF90aW1lIjoxNzA4MzQ4MTQzLCJqdGkiOiI5OGZjZDFiNy0wZGE5LTRkZGQtODUwNy1hM2I1YmU3NmY0ZmIiLCJpc3MiOiJodHRwczovL2VoZWFsdGhzdWlzc2UuaWhlLWV1cm9wZS5uZXQvaXVhLXNzby9yZWFsbXMvY2gtaXVhIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImFjNGZkNjI2LWNiZGYtNGIzMC1hOTNhLTc0YTM2YWQyM2QwYiIsInR5cCI6IkJlYXJlciIsImF6cCI6ImNoLWl1YS1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiYzUyMTE2NjItY2VhNy00ZmFmLWFkZjktNDNiNTE2MGNjYjUwIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1jaC1pdWEiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwdXJwb3NlX29mX3VzZT11cm46b2lkOjIuMTYuNzU2LjUuMzAuMS4xMjcuMy4xMC41fE5PUk0gcHJvZmlsZSBsYXVuY2ggZW1haWwiLCJzaWQiOiJjNTIxMTY2Mi1jZWE3LTRmYWYtYWRmOS00M2I1MTYwY2NiNTAiLCJleHRlbnNpb25zIjp7ImNoX2VwciI6eyJ1c2VyX2lkX3F1YWxpZmllciI6InVybjpnczE6Z2xuIiwidXNlcl9pZCI6Ijc2MDEwMDI0NjczNzMifSwiY2hfaXVhIjp7ImxhdW5jaCI6ImxhdW5jaCJ9LCJpaGVfaXVhIjp7InB1cnBvc2Vfb2ZfdXNlIjp7ImNvZGUiOiJOT1JNIiwic3lzdGVtIjoidXJuOm9pZDoyLjE2Ljc1Ni41LjMwLjEuMTI3LjMuMTAuNSJ9fX0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6InJyZXlub2xkcyBSZXlub2xkcyIsInByZWZlcnJlZF91c2VybmFtZSI6InJyZXlub2xkcyIsImdpdmVuX25hbWUiOiJycmV5bm9sZHMiLCJmYW1pbHlfbmFtZSI6IlJleW5vbGRzIn0.mT9ZTGNqTfsMBxoyGLaQlUr9PVcFItvlKmZxjY4_OAHqi4nE82S5n0mE4iy_5YL_sbYtNODI1L_LH6keBTCSbSOY5REkp_NLm4QLzdX4ynJ7Y_nMoD5H6TFqJTrllKVJ5IKtXhWv9bLQK35PLLPeNMZH4yl3ChlOlx0IH-zqHEPcOV69kN1vC7_Jjj0vx3d0RFvR_0sbfG3XnSiO3fpwwj2xYgRfZkfJqTuZ5404j9nu8TiPHtCRqQ_EPtEirUTG1ClX1DahJRKB-jwLHThxkKooUxsRAQZVhqayhLMV8sxwNkeHnNemhqreOkeDELxn2ZC-VOQLe9WRsX37QagO1g",
+			"type": "string"
+		},
+		{
+			"key": "traceparent",
+			"value": "00-0af7651916cd43dd8448eb211c80319c-b7ad6b7169203331-00",
+			"type": "string"
+		},
+		{
+			"key": "id",
+			"value": "267"
+		},
+		{
+			"key": "family",
+			"value": "BERGAN",
+			"type": "string"
+		},
+		{
+			"key": "given female",
+			"value": "Alessandra",
+			"type": "string"
+		},
+		{
+			"key": "identifier",
+			"value": "c",
+			"type": "string"
+		},
+		{
+			"key": "mothersMaidenName",
+			"value": "Tamoudi",
+			"type": "string"
+		},
+		{
+			"key": "Endpoint",
+			"value": "https://gazelle.racsel.org/pdqm-fhir-simulator/IHE/fhir/",
+			"type": "string"
+		},
+		{
+			"key": "address",
+			"value": "Könizbergstrasse 3018 Bern",
+			"type": "string"
+		},
+		{
+			"key": "address-city",
+			"value": "Bern",
+			"type": "string"
+		},
+		{
+			"key": "address-country",
+			"value": "CHE",
+			"type": "string"
+		},
+		{
+			"key": "address-postalcode",
+			"value": "3018",
+			"type": "string"
+		},
+		{
+			"key": "address-state",
+			"value": "WI",
+			"type": "string"
+		},
+		{
+			"key": "name",
+			"value": "Bergan Ovie",
+			"type": "string"
+		},
+		{
+			"key": "telecom",
+			"value": "%2B41%2520%280%2958%2520462%252093%252059",
+			"type": "string"
+		},
+		{
+			"key": "identifier2",
+			"value": "urn:oid:1.3.6.1.4.1.12559.11.20.1%7CCHPAM96",
+			"type": "string"
+		},
+		{
+			"key": "given male",
+			"value": "Ovie",
+			"type": "string"
+		},
+		{
+			"key": "family2",
+			"value": "Ehrxyzmedical"
+		}
+	]
+}
